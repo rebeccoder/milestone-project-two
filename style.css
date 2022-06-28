@@ -37,10 +37,10 @@ body {
     border-top: none;
 }
 
-.cell :nth-child(3n + 1) {
+.cell:nth-child(3n + 1) {
     border-left: none;
 }
-.cell :nth-child(3n + 3) {
+.cell:nth-child(3n + 3) {
     border-right: none;
 }
 
@@ -48,4 +48,9 @@ body {
 .cell:nth-child(8),
 .cell:nth-child(7) {
     border-bottom: none;
+}
+
+.cell.x::before,
+.cell.x::after {
+
 }
