@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cell-size: 100px;
+/* makes x's and o's 90% of the size of the cell size */
+    --mark-size: cal(var(--cell-size) * .9);
+}
 body {
     margin: 0; 
 }
@@ -11,16 +16,18 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-/* centers everything on the board inside the board div */
+/*justify-content and align-content centers everything on the board inside the board div */
     justify-content: center;
     align-content: center; 
+/*justify-items and align-items centers the x's and o's in the center of their cells, not just the cells themself */
+    justify-items: center;
+    align-items: center;
     grid-template-columns: repeat(3, auto);
 }
 
 .cell {
-    width: 100px;
-    height: 100px; 
-    background-color: black;
-    border: 1px solid white;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
 
 }
