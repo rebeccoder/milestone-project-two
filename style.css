@@ -32,7 +32,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: relative;
+    cursor: pointer;
 }
 
 .cell:first-child,
@@ -54,10 +55,49 @@ body {
     border-bottom: none;
 }
 
+.cell.x,
+.cell.circle {
+    cursor:not-allowed;
+}
+
+/* This code creates the lines in the X on the X board */
 .cell.x::before,
 .cell.x::after {
     content: '';
+    position: absolute;
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
     background-color: black;
+}
+
+/*This rotates the one line of the X */
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+/*This rotates the other line of the X*/
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+/*This creates a circle in the O cells */
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    position: absolute;
+    border-radius:50%;
+}
+
+/* The visible part of the cirle*/
+.cell.circle::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color:black;
+}
+
+/* The inside part of the circle */
+.cell.circle:after {
+    width: calc(var(--mark-size) * .7);
+    height: calc(var(--mark-size) * .7);
+    background-color:white;
 }
