@@ -6,7 +6,7 @@
 :root {
     --cell-size: 100px;
 /* makes x's and o's 90% of the size of the cell size */
-    --mark-size: cal(var(--cell-size) * .9);
+    --mark-size: calc(var(--cell-size) * .9);
 }
 body {
     margin: 0; 
@@ -29,6 +29,10 @@ body {
     width: var(--cell-size);
     height: var(--cell-size);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .cell:first-child,
@@ -52,5 +56,8 @@ body {
 
 .cell.x::before,
 .cell.x::after {
-
+    content: '';
+    width: calc(var(--mark-size) * .15);
+    height: var(--mark-size);
+    background-color: black;
 }
