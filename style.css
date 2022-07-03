@@ -60,23 +60,36 @@ body {
     cursor:not-allowed;
 }
 
-/* This code creates the lines in the X on the X board */
 .cell.x::before,
 .cell.x::after {
+    background-color:black ;
+}
+/* .board.x .cellnot(.x):not(.circle):hover creates a hover effect over all the cells on the x board that are not in use */
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    background-color: lightgrey;
+}
+
+/* This code creates the lines in the X on the X board */
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:hover::after {
     content: '';
     position: absolute;
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
-    background-color: black;
 }
 
 /*This rotates the one line of the X */
-.cell.x::before {
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
     transform: rotate(45deg);
 }
 
 /*This rotates the other line of the X*/
-.cell.x::after {
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
     transform: rotate(-45deg);
 }
 
