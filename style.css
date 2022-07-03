@@ -76,7 +76,7 @@ body {
 .cell.x::before,
 .cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:hover::after {
+.board.x .cell:not(.x):not(.circle):hover::after {
     content: '';
     position: absolute;
     width: calc(var(--mark-size) * .15);
