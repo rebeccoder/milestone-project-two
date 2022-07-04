@@ -11,9 +11,15 @@ cellElements.forEach(cell => {
 
 function handleClick(e) {
     const cell = e.target
+// if its circles turn show circle board or if not show x's board//
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS
-    // placeMark
+//placemark allows you to enter the x or circle into the cell //
+    placeMark(cell, currentClass)
     // Check For Win
     // Check For Draw
     // Switch Turns
+}
+
+function placeMark(cell, currentClass) {
+    cell.classList.add(currentClass)
 }
