@@ -17,6 +17,7 @@ let circleTurn
 startGame()
 
 function startGame() {
+// starts game on x's turn
     circleTurn = false
 // this code only ever fires this event listener once. so if you clicked on a cell once it will not fire up the event again. 
 cellElements.forEach(cell => {
@@ -24,11 +25,13 @@ cellElements.forEach(cell => {
 })    
 }
 function handleClick(e) {
-
     const cell = e.target
 // if its circles turn show circle board or if not show x's board
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS
     placeMark(cell, currentClass)
+    if (checkWin(currentClass)) {
+        console.log('winner')
+    }
     swapTurns()
     setBoardHoverClass()
 }
@@ -54,3 +57,12 @@ function setBoardHoverClass() {
     }
 }
 
+
+// so if any of the winning combinations happen then it will be recognised as a win
+function checkWin(currentClass) {
+    return WINNING_COMBINATIONS.some(combination => {
+        return combination.every(index => {
+        return cellElements[index].classList.contains(currentClass)
+         })
+    })
+}
