@@ -5,12 +5,17 @@ const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 let circleTurn
 
-// this code only ever fire this event listener once. so if you clicked on a cell once it will not fire up the event again. 
+startGame()
+
+function startGame() {
+    circleTurn = false
+// this code only ever fires this event listener once. so if you clicked on a cell once it will not fire up the event again. 
 cellElements.forEach(cell => {
     cell.addEventListener('click', handleClick, { once: true})
-})
-
+})    
+}
 function handleClick(e) {
+
     const cell = e.target
 // if its circles turn show circle board or if not show x's board
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS
@@ -29,6 +34,7 @@ function swapTurns() {
     circleTurn = !circleTurn
 }
 
+// adds the correct hover effect to each board 
 function setBoardHoverClass() {
     board.classList.remove(X_CLASS)
     board.classList.remove(CIRCLE_CLASS)
@@ -38,3 +44,4 @@ function setBoardHoverClass() {
         board.classList.add(X_CLASS)
     }
 }
+
