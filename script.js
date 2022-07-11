@@ -33,20 +33,31 @@ function handleClick(e) {
     placeMark(cell, currentClass)
     if (checkWin(currentClass)) {
         endGame(false)
+    } else if (isDraw()) {
+        endGame(true)
+    } else {
+        swapTurns ()
+        setBoardHoverClass()
     }
-    swapTurns()
-    setBoardHoverClass()
 }
 
 
 // shows winning message when x's or o's wins
 function endGame(draw) {
     if (draw) {
-
+        winningMessageElement.innerText = 'Draw!'
     } else {
         winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
     }
     winningMessageElement.classList.add('show')
+}
+
+// shows winning message if there is a draw
+function isDraw() {
+    return [...cellElements].every(cell => {
+        return cell.classList.contains(X_CLASS) ||
+        cell.classList.contains(CIRCLE_CLASS)
+    })
 }
 //placemark allows you to enter the x or circle into the cell 
     function placeMark(cell, currentClass) {
