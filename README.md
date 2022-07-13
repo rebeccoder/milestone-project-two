@@ -7,6 +7,7 @@ LIVE LINK |
 
 ## Features
 
+- This app has been trialled and tested on many devices. It is fully responsive on all device sizes. This did not requrie any 
 - The website is a black and white theme with a white background and black text
 - There is a table in the centre of the screen with 9 cells, 3 across and 3 down.
 - When you hover over the cells in the grid there is a hover effect showing a grey X when it's X's turn and a grey 0 when its 0's turn.
