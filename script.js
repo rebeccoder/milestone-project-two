@@ -13,19 +13,28 @@ const WINNING_COMBINATIONS = [
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 const winningMessageElement = document.getElementById('winningMessage')
+const restartButton = document.getElementById ('restartButton')
 const winningMessageTextElement = document.querySelector('[data-winning-message-text')
 let circleTurn
 
 startGame()
 
+restartButton.addEventListener('click', startGame)
+
 function startGame() {
 // starts game on x's turn
-    circleTurn = false
+  circleTurn = false
 // this code only ever fires this event listener once. so if you clicked on a cell once it will not fire up the event again. 
-cellElements.forEach(cell => {
-    cell.addEventListener('click', handleClick, { once: true})
+  cellElements.forEach(cell => {
+    cell.classList.remove(X_CLASS)
+    cell.classList.remove(CIRCLE_CLASS)
+    cell.removeEventListener('click', handleClick)
+    cell.addEventListener('click', handleClick, { once: true })
 })    
+    setBoardHoverClass()
+    winningMessageElement.classList.remove('show')
 }
+
 function handleClick(e) {
     const cell = e.target
 // if its circles turn show circle board or if not show x's board
