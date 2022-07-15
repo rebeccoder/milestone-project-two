@@ -7,7 +7,7 @@
     <meta name= "description"
         content="Play the traditional Tic Tac Toe game for free online on your computer or on your phone!" />
     <meta name="keywords"
-        content="tic tac toe, naughts and crosses, x's and o's, games, boardgames, educational games"
+        content="tic tac toe, naughts and crosses, x's and o's, games, boardgames, educational games"/>
     <link rel="stylesheet" href="style.css">
     <!-- defer is to ensure that the js file loads after the html-->
     <script src="script.js" defer></script>
@@ -16,15 +16,16 @@
 <body>
 <!-- tic tac toe board-->
     <div class="board x" id="board">
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
-        <div class="cell" data-cell></div>
+<!-- added the div role as text so that screen readers know the purpose of the divs, then added an aria label for -->
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
+        <div role= "text" class="cell" data-cell></div>
     </div>
 
     <div class="winning-message" id="winningMessage">

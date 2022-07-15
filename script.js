@@ -71,6 +71,10 @@ function isDraw() {
 //placemark allows you to enter the x or circle into the cell 
     function placeMark(cell, currentClass) {
     cell.classList.add(currentClass)
+//This allows screen readers to see whether it is an x or an 0
+    cell.ariaLabel = X_CLASS 
+    cell.ariaLabel = CIRCLE_CLASS
+    cell.ariaLabel = currentClass;
 }
 
 // switches turns from x and circle
@@ -88,7 +92,6 @@ function setBoardHoverClass() {
         board.classList.add(X_CLASS)
     }
 }
-
 
 // so if any of the winning combinations happen then it will be recognised as a win
 function checkWin(currentClass) {
