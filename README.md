@@ -11,11 +11,11 @@ The website was designed on a wireframe software called Balsamiq.
 
 ### The main page of the webpage:
 
-<p><img src= "assets/images/wireframespage1.jpg"></p>
+<p><img src= "assets/images/wireframe-1.jpg"></p>
 
 ### The winning message page:
 
-<p><img src= "assets/images/wireframespage2.jpg"></p>
+<p><img src= "assets/images/wireframe-2.jpg"></p>
 
 
 
@@ -24,20 +24,20 @@ The website was designed on a wireframe software called Balsamiq.
 
 - The website is a black and white theme with a white background and black text
 - There is a table in the centre of the screen with 9 cells, 3 across and 3 down.
-<p><img src= "assets/images/blackandwhitegrid.jpg"></p>
+<p><img src= "assets/images/empty-grid.jpg"></p>
 
 - When you hover over the cells in the grid there is a hover effect showing a grey X when it's X's turn and a grey 0 when its 0's turn.
 
- <p><img src= "assets/images/hoveringgreyx.jpg"></p>
+ <p><img src= "assets/images/hovering-grey-x.jpg"></p>
 
 - The X or 0 then becomes black once the user clicks the chosen cell
 
-<p><img src= "assets/images/blackxand0.jpg"></p>
+<p><img src= "assets/images/black-x-and-0.jpg"></p>
 
 - A 'blocked' cursor appears over the cells which are already in use when they're hovered over to make it clear that these cells can not be used
 - When somebody wins a black background covers the screen and a message appears saying either "X's Win!" / "0's Win!" / "Draw!"
 
- <p><img src= "assets/images/xwins.jpg"></p>
+ <p><img src= "assets/images/x-wins.jpg"></p>
 
 - There is a restart button under the winning message that takes you to the start of a new game
 
@@ -66,9 +66,11 @@ This app has been trialled and tested on many devices and is fully responsive. N
      - Nest Hub 
      - Nest Hub Max
 
-     ## Debugging
+## The Process
 
-     59 warnings
+## Debugging
+
+59 warnings
 - 12	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
 - 12	Missing semicolon.
 - 13	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
