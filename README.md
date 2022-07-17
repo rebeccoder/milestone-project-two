@@ -66,4 +66,67 @@ This app has been trialled and tested on many devices and is fully responsive. N
      - Nest Hub 
      - Nest Hub Max
 
+     ## Debugging
+
+     59 warnings
+- 12	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 12	Missing semicolon.
+- 13	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+13	Missing semicolon.
+- 14	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 23	Missing semicolon.
+- 24	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 24	Missing semicolon.
+- 25	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 25	Missing semicolon.
+- 26	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 26	Missing semicolon.
+- 27	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 27	Missing semicolon.
+- 28	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 28	Missing semicolon.
+- 29	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 29	Missing semicolon.
+- 31	Missing semicolon.
+- 33	Missing semicolon.
+- 37	Missing semicolon.
+- 39	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+- 40	Missing semicolon.
+- 41	Missing semicolon.
+- 42	Missing semicolon.
+- 43	Missing semicolon.
+- 44	Missing semicolon.
+- 45	Missing semicolon.
+- 46	Missing semicolon.
+- 50	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 50	Missing semicolon.
+- 52	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+- 52	Missing semicolon.
+- 53	Missing semicolon.
+- 55	Missing semicolon.
+- 57	Missing semicolon.
+- 59	Missing semicolon.
+- 60	Missing semicolon.
+- 68	Missing semicolon.
+- 70	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+- 70	Missing semicolon.
+- 72	Missing semicolon.
+- 77	'spread operator' is only available in ES6 (use 'esversion: 6').
+- 77	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+- 79	Missing semicolon.
+- 80	Missing semicolon.
+- 84	Missing semicolon.
+- 86	Missing semicolon.
+- 87	Missing semicolon.
+- 93	Missing semicolon.
+- 98	Missing semicolon.
+- 99	Missing semicolon.
+- 101	Missing semicolon.
+- 103	Missing semicolon.
+- 109	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+- 110	'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+- 111	Missing semicolon.
+- 112	Missing semicolon.
+- 113	Missing semicolon.
+
 
