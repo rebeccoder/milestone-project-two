@@ -1,12 +1,25 @@
 # TIC TAC TOE 
 
 ## Overview
-This app was created for my second milestone project with The Code Institute where I demonstrate what I have learnt so far on their web development course. It is a interactive front end website using HTML, CSS and JavaScript. The websites goal is to be intuitive, user friendly, simple to use and fun.
+This app was created for my second milestone project with The Code Institute where I demonstrate what I have learnt so far on their web development course. It is a interactive front end website using HTML, CSS and JavaScript. The websites goal is to be intuitive, user friendly, simple to use and fun. The game is suitable for anyone but it's minimalist design is to be more appealing to adults, to keep give them something to do either on their breaks at works or on the commute or just winding down in the evening. The idea is that it is a super simple, calm game that is familiar and the design is uncluttered and not over stimulating to help rest the mind.
 
 LIVE LINK | 
 
-## Features
+## Wireframes
 
+The website was designed on a wireframe software called Balsamiq.
+
+### The main page of the webpage:
+
+<p><img src= "assets/images/wireframespage1.jpg"></p>
+
+### The winning message page:
+
+<p><img src= "assets/images/wireframespage2.jpg"></p>
+
+
+
+## Features
 
 
 - The website is a black and white theme with a white background and black text
@@ -26,7 +39,7 @@ LIVE LINK |
 
  <p><img src= "assets/images/xwins.jpg"></p>
 
-- There is a restart button that takes you to the start of a new game
+- There is a restart button under the winning message that takes you to the start of a new game
 
 
 
