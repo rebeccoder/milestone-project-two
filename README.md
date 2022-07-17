@@ -41,8 +41,6 @@ The website was designed on a wireframe software called Balsamiq.
 
 - There is a restart button under the winning message that takes you to the start of a new game
 
-
-
 ## Responsivity
 This app has been trialled and tested on many devices and is fully responsive. No code was required to make the website responsive as it already worked on all devices so nothing needed to be rearranged or made compatible.It is fully responsive on all the following devices manually:
     - 24 inch screen for windows 10 PC
@@ -67,6 +65,10 @@ This app has been trialled and tested on many devices and is fully responsive. N
      - Nest Hub Max
 
 ## The Process
+
+ <p><img src= "assets/images/initial-html.jpg></p>
+ 
+
 
 ## Debugging
 
