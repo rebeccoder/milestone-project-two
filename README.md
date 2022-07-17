@@ -12,14 +12,26 @@ LIVE LINK |
 - The website is a black and white theme with a white background and black text
 - There is a table in the centre of the screen with 9 cells, 3 across and 3 down.
 <p><img src= "assets/images/blackandwhitegrid.jpg"></p>
+
 - When you hover over the cells in the grid there is a hover effect showing a grey X when it's X's turn and a grey 0 when its 0's turn.
 
+ <p><img src= "assets/images/hoveringgreyx.jpg"></p>
+
 - The X or 0 then becomes black once the user clicks the chosen cell
+
 <p><img src= "assets/images/blackxand0.jpg"></p>
+
 - A 'blocked' cursor appears over the cells which are already in use when they're hovered over to make it clear that these cells can not be used
 - When somebody wins a black background covers the screen and a message appears saying either "X's Win!" / "0's Win!" / "Draw!"
+
+ <p><img src= "assets/images/xwins.jpg"></p>
+
 - There is a restart button that takes you to the start of a new game
-- This app has been trialled and tested on many devices and is fully responsive. No code was required to make the website responsive as it already worked on all devices so nothing needed to be rearranged or made compatible.It is fully responsive on all the following devices manually:
+
+
+
+## Responsivity
+This app has been trialled and tested on many devices and is fully responsive. No code was required to make the website responsive as it already worked on all devices so nothing needed to be rearranged or made compatible.It is fully responsive on all the following devices manually:
     - 24 inch screen for windows 10 PC
     - 17 inch screen for windows 10 PC
     - Macbook Air
