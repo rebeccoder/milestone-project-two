@@ -43,32 +43,45 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Responsivity
 This app has been trialled and tested on many devices and is fully responsive. No code was required to make the website responsive as it already worked on all devices so nothing needed to be rearranged or made compatible.It is fully responsive on all the following devices manually:
-    - 24 inch screen for windows 10 PC
-    - 17 inch screen for windows 10 PC
-    - Macbook Air
-    - Iphone 7
-    - ASUS TUF-FX516PE-HN055T 15.6inch screen
-- The responsivity was also responsive to the following devices using Google Development tools
-     - iPhone SE
-     - iPhone XR
-     - iPhone 12 Pro
-     - Pixel 5
-     - Samsung Galaxy S8+
-     - Samsung Galaxy S20 Ultra
-     - iPad Air
-     - iPad Mini
-     - Surface Pro 7
-     - Surface Duo
-     - Galaxy Fold  
-     - Samsung Galazy A51/71
-     - Nest Hub 
-     - Nest Hub Max
+  - 24 inch screen for windows 10 PC
+  - 17 inch screen for windows 10 PC
+  - Macbook Air
+  - Iphone 7
+  - ASUS TUF-FX516PE-HN055T 15.6inch screen
+
+The responsivity was also responsive to the following devices using Google Development tools
+ - iPhone SE
+ - iPhone XR
+ - iPhone 12 Pro
+ - Pixel 5
+ - Samsung Galaxy S8+
+ - Samsung Galaxy S20 Ultra
+ - iPad Air
+ - iPad Mini
+ - Surface Pro 7
+ - Surface Duo
+ - Galaxy Fold  
+ - Samsung Galazy A51/71
+ - Nest Hub 
+ - Nest Hub Max
 
 ## The Process
-
- <p><img src= "assets/images/initial-html.jpg></p>
  
+ Initially the html is almost completely invisible to the webpage, the only thing appearing is the restart button
 
+ <p><img src= "assets/images/initial-html.jpg"></p>
+
+ <p><img src= "assets/images/initial-webpage.jpg"></p>
+
+So I then started adding some CSS styling to the webpage to begin making it look like the wireframe I made.
+
+The first thing I did was set up some basic box sizing. I did this by adding the everything selector and everything that is going to be before and after. This essentially selects absolutely everything and makes styling the widths and heights a lot easier. 
+
+ <p><img src= "assets/images/everything-code.jpg"></p>
+
+I then removed the margins so that the black background in the winning message would be easier to put in place
+
+ <p><img src= "assets/images/margin-code.jpg"></p>
 
 ## Debugging
 
