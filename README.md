@@ -87,7 +87,10 @@ The next thing I worked on was the actual board which is the element that wraps 
 
  <p><img src= "assets/images/board-cell-code.jpg"></p>
  <p><img src= "assets/images/black-grid.jpg"></p>
+ 
+ To easily modify things with the width and height and make sure that everything is automatic I created some root variables. The first variable I created was the cell width. I then created a mark size which to modify the size of the x's and 0's. I decided to make the mark size 90% of the cell size so that the x's and 0's are slightly smaller than the the cells
 
+ <p><img src= "assets/images/root-code.jpg"></p>
 
 ## Debugging
 
