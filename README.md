@@ -83,6 +83,12 @@ I then removed the margins so that the black background in the winning message w
 
  <p><img src= "assets/images/margin-code.jpg"></p>
 
+The next thing I worked on was the actual board which is the element that wraps all of the cells. The settings allow the board to be easily centred in the middle of the screen in a 3x3 grid.
+
+ <p><img src= "assets/images/board-cell-code.jpg"></p>
+ <p><img src= "assets/images/black-grid.jpg"></p>
+
+
 ## Debugging
 
 59 warnings
