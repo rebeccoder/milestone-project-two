@@ -92,6 +92,31 @@ The next thing I worked on was the actual board which is the element that wraps 
 
  <p><img src= "assets/images/root-code.jpg"></p>
 
+I then changed the colour of the cells as I didn't want them to be black, I changed the cell colour to white and the boarder colour to black and removed the borders from around the grid.
+
+ <p><img src= "assets/images/no-grid-border-code.jpg"></p>
+
+so now the board itself looks how I want it to look for the completed project.
+
+
+I then began styling in an X. So instead of just typing an X into the cell and worrying about what style to use and it looking different on different devices and being hard to centre, instead I used just CSS and pseudo elements to create the X shape. Although upon reflection now I don't think I wouold use this method again which I will explain later in the README in the debugging section.
+
+To  make the X I  firstly created this shape in the cell
+
+ <p><img src= "assets/images/one-line-x-board.jpg"></p>
+
+using the code.
+
+ <p><img src= "assets/images/making-x-board-1.jpg"></p>
+
+
+Because there is two of the lines one on top of the other to create the X shape I just rotated each line 45 degrees in opposite directions.
+
+ <p><img src= "assets/images/making-x-board-2.jpg"></p>
+
+
+
+
 ## Debugging
 
 59 warnings
