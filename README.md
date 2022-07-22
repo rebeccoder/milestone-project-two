@@ -114,6 +114,26 @@ Because there is two of the lines one on top of the other to create the X shape 
 
  <p><img src= "assets/images/making-x-board-2.jpg"></p>
 
+Next, I made the circle element. I started with this code:
+
+ <p><img src= "assets/images/circle-code-1.jpg"></p>
+
+ which created this square in the boards cell
+
+  <p><img src= "assets/images/initial-square-for-circle.jpg"></p>
+
+and then the following code:
+
+  <p><img src= "assets/images/circle-code-2.jpg"></p>
+
+which creates the perfect circle.
+
+  <p><img src= "assets/images/completed-circle.jpg"></p>
+
+Next I added the not allowed cursor for when the user hovers over the cells which were already filled:
+
+  <p><img src= "assets/images/not-allowed-cursor.jpg"></p>
+  <p><img src= "assets/images/not-allowed-cursor-view.jpg"></p>
 
 
 
