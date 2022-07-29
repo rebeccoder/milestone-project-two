@@ -160,6 +160,13 @@ This didn't actually work because I already had black being defined below it and
 So now I have a grey X that hovers over the empty cells when using the X board. I then repeated the whole process for the circle board for the same outcome with a grey circle hovering effect.
 
 
+The very last thing I had to style was the winning message.
+I selected the winning message div that I created and made sure it was always at the center of the screen. I then added a background that was black and 90% transparent so that there's a black overlay covering the screen. I also made sure that the restart button was positioned in the center. I made the text white and increased the font size so that the winning message is clear. 
+
+  <p><img src= "assets/images/winning-message-code.jpg"></p>
+
+  <p><img src= "assets/images/winning-message-image.jpg"></p>
+
 ## Debugging
 
 59 warnings
