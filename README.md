@@ -167,6 +167,20 @@ I selected the winning message div that I created and made sure it was always at
 
   <p><img src= "assets/images/winning-message-image.jpg"></p>
 
+I then styled the winning message button too. I centred it by adding flex-direction: column to the winning-message. I also added a hover effect so that the colors invert once hovered over.
+
+  <p><img src= "assets/images/winning-message-button-code.jpg"></p>
+
+  <p><img src= "assets/images/winning-message-button-image.jpg"></p>
+
+The last thing to do is to just be default to make a display of none because I don't want this message to show up by default so i added this to the winning message css code:
+
+  <p><img src= "assets/images/display-none-code.jpg"></p>
+
+and added the display:flex to a seperate class so that it only displays the winning message when it's giving the class "show".
+
+  <p><img src= "assets/images/display-none-code.jpg"></p>
+
 ## Debugging
 
 59 warnings
