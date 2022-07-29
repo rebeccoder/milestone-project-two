@@ -130,11 +130,34 @@ which creates the perfect circle.
 
   <p><img src= "assets/images/completed-circle.jpg"></p>
 
-Next I added the not allowed cursor for when the user hovers over the cells which were already filled:
+Next I added the 'not allowed' cursor for when the user hovers over the cells which were already filled:
 
   <p><img src= "assets/images/not-allowed-cursor.jpg"></p>
   <p><img src= "assets/images/not-allowed-cursor-view.jpg"></p>
 
+I then added the grey X and 0 hover effect to the cells that are not in use:
+  <p><img src= "assets/images/grey-hover-x.jpg"></p>
+In order to do this I added a hover effect to the cells. Firstly I selected the board when it has the X class applied to it and got the cells inside of that board and add the hover effect to them . I basically just needed the same code that I used to create the X's and just changed the background color. So I added the hover::before and hover::after elements to the exact same code. 
+  <p><img src= "assets/images/x-hover-code.jpg"></p>
+Although as you can see this causes it to happen on all of them, even the ones that are already filled in:
+
+  <p><img src= "assets/images/hovering-bug.jpg"></p>
+
+What I want it to do is make sure it only works when I hover over an empty cell that doesn't have an X or an 0 in it. This is where I used the "not" selector.
+
+  <p><img src= "assets/images/not-selector-code.jpg"></p>
+
+Now when I hover over the X or 0 it's not overriding what I've already done. It's not doing the hover effect because it's checking the "not" selector first.
+
+
+All I have to do then is change the hover color to grey:
+  <p><img src= "assets/images/code-light-grey.jpg"></p>
+
+This didn't actually work because I already had black being defined below it and overriding it so I removed that and defined this code above the other selector.
+
+  <p><img src= "assets/images/code-black-x.jpg"></p>
+
+So now I have a grey X that hovers over the empty cells when using the X board. I then repeated the whole process for the circle board for the same outcome with a grey circle hovering effect.
 
 
 ## Debugging
