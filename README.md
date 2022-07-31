@@ -181,6 +181,17 @@ and added the display:flex to a seperate class so that it only displays the winn
 
   <p><img src= "assets/images/display-none-code.jpg"></p>
 
+Once I finished styling the webpage I then started on making the page interactive using Java Script.
+
+Firstly I selected all the different cells and added an event listener everytime a cell is clicked on. This event listener makes sure that the cell can only be clicked on once and it doesn't fire up the event if it's clicked on again.
+
+  <p><img src= "assets/images/event-listener-code.jpg"></p>
+
+I went on to create a function that handles the click.
+Inside of this function I had to do quite a few things, the first thing we need to do is place the mark, then check for a win, and check for draw and then switch turns if there's no win. 
+
+To be able to place the mark it first needs to know who's turn it is so I created a variable, if its true then it's circles turn and if it's false then it's X's turn. 
+
 ## Debugging
 
 59 warnings
