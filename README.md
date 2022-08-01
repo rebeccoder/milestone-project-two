@@ -192,6 +192,14 @@ Inside of this function I had to do quite a few things, the first thing we need 
 
 To be able to place the mark it first needs to know who's turn it is so I created a variable, if its true then it's circles turn and if it's false then it's X's turn. 
 
+  <p><img src= "assets/images/handle-click-code.jpg"></p>
+
+I then created a couple of constant variables which is the X_CLASS and the CIRCLE_CLASS. This way I can easily use these strings throughout the application without having to duplicate them all over the place.
+
+I then added a constant variable of currentClass that tells the computer that if its circle turn then we want to return the circle class and if it's x's turn we want to return the X's class. 
+
+  <p><img src= "assets/images/current-class-code.jpg"></p>
+
 ## Debugging
 
 59 warnings
