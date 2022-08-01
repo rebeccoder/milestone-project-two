@@ -250,6 +250,18 @@ One problem is that the cell elements doesn't have every method but to get aroun
 
   <p><img src= "assets/images/is-draw-code.jpg"></p>
 
+The last bit of functionality needed to be added is the restart button.
+I added a constant variable called restartButton and got the restart button element by ID. I then added an event listener so that everytime it's clicked on it calls the startGame function.
+  <p><img src= "assets/images/restart-button-code.jpg"></p>
+
+However when I click the restart button at this stage nothing happens. This is because the startGame function is not reversing the state of everything that's happened. It is setting everything up but it also needs to unset everything up.
+
+The first thing I do is change the winning message element and remove the show class. This removed the show class however it didn't remove the other information in the table.
+
+To remove that was really easy, I just needed to set a loop through all the cells, remove the X class and the same thing for the circle class and I also want to remove the handleClick event listener.
+  <p><img src= "assets/images/start-game-code-restart.jpg"></p>
+
+Now all the code is functioning exactly how I want it to. So now I want to make the website more accessible and there is where I ran into some trouble.
 
 ## Debugging      
 
