@@ -232,6 +232,16 @@ To check this worked I added console.log('winner') to the handleClick function t
 
 So now that works I needed to create a winning message so that the player knows there's been a win. 
 
+In order to do that I added the function called endGame(draw) so that if else its not a draw then it will select the winning message text element. 
+I created a constant variable for the winning message text element and used document.querySelector to select the data-winning-message-text div. 
+
+  <p><img src= "assets/images/winning-message-text-code.jpg"></p>
+
+I then set the inner text to be equal to a string and check to see who's turn it is so if it's circles turn I want it to say that the 0's win and in x's win I want it to say that the X's win.
+I also want the message to actually show when someone has won so I added that in too.
+
+  <p><img src= "assets/images/end-game-code.jpg"></p>
+
 
 ## Debugging      
 
