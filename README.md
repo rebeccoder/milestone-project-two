@@ -218,7 +218,22 @@ The first instance is not actually showing the board hover class so I called a f
 
   <p><img src= "assets/images/start-game-code.jpg"></p>
 
-## Debugging
+Now all that is left to do is to check for a win and check for a draw.
+
+I created an array got all the winning combinations which is an array that is full of arrays. 
+  <p><img src= "assets/images/winning-combinations-code.jpg"></p>
+I then used this inside of a function here which is going to check if any of the winning combinations have been met by the current combinations by the same class. So if the current class is in all three of the elements inside of the combination then they are a winner.
+
+  <p><img src= "assets/images/check-win-code.jpg"></p>
+
+To check this worked I added console.log('winner') to the handleClick function temporarily. I tried a few winning combinations and could see that this works. 
+
+  <p><img src= "assets/images/console-log-winner.jpg"></p>
+
+So now that works I needed to create a winning message so that the player knows there's been a win. 
+
+
+## Debugging      
 
 59 warnings
 - 12	'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
