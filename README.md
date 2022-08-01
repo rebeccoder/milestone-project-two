@@ -242,6 +242,14 @@ I also want the message to actually show when someone has won so I added that in
 
   <p><img src= "assets/images/end-game-code.jpg"></p>
 
+So now to add what happens if there is a draw.
+So if endgame(draw) is true then its very similar to the above. I select the inner text of the winning message and set it as "Draw!"
+
+I then set the function isDraw() to check that every single element is filled with an x or circle class with no winning combinations then it is a draw.
+One problem is that the cell elements doesn't have every method but to get around that I just destructured the cellElements into an array so it had the method.
+
+  <p><img src= "assets/images/is-draw-code.jpg"></p>
+
 
 ## Debugging      
 
