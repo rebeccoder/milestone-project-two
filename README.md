@@ -204,6 +204,20 @@ Next I added the code to place the mark, I actually just did this inside of a fu
 
   <p><img src= "assets/images/place-mark-code.jpg"></p>
 
+I then skipped check for win and check for draw for now as the switching turns was the most important thing to focus on. 
+
+So I created a function called swapTurns which just takes circle turn and its going to set it to the opposite of circle. Now when I click it starts with X's turn and then circles turn and so on always swapping every single time.
+
+  <p><img src= "assets/images/swap-turns-code.jpg"></p>
+
+I then noticed that when I refreshed it and I hover over the empty grid I was not getting those hover effects. So I applied those hover effects by calling a function called setBoardHoverClass() and in this function I determine which class I'm going to apply. I set this function below the swapTurns function so that it knows which current player it is. I want the hover class to be based on who's turn it currently is, not on who's turn it used to be. I then selected the board by ID then removed X_CLASS from the board and CIRCLE_CLASS from the board. Then I put that if circles turn then apply circle class else if it's x's turn to add x class.
+
+  <p><img src= "assets/images/set-board-hover-class-code.jpg"></p>
+
+The first instance is not actually showing the board hover class so I called a function which is called startGame and inside of this function I set up all the cell elements and set the board hover class  set circle turn to equal false just to start. I then called the function startGame() at the beginning so that it's actually starting the game.
+
+  <p><img src= "assets/images/start-game-code.jpg"></p>
+
 ## Debugging
 
 59 warnings
