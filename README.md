@@ -200,6 +200,10 @@ I then added a constant variable of currentClass that tells the computer that if
 
   <p><img src= "assets/images/current-class-code.jpg"></p>
 
+Next I added the code to place the mark, I actually just did this inside of a function. This was really easy I just added current class to the cell.
+
+  <p><img src= "assets/images/place-mark-code.jpg"></p>
+
 ## Debugging
 
 59 warnings
