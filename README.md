@@ -300,3 +300,13 @@ The other error that came up was "'const' is available in ES6 (use 'esversion: 6
 
 
 As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
+
+
+## External Sources of Code
+
+The tic tac toe game was built based on a youtube tutorial:
+
+Build Tic Tac Toe With JavaScript - Tutorial
+by Web Dev Simplified
+
+https://www.youtube.com/watch?v=Y-GkMjUZsmM
