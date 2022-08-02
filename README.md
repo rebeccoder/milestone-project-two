@@ -341,7 +341,7 @@ The project was deployed to GitHub Pages using the following steps...
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://rebeccoder.github.io/milestone-project-one/index.html) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site [link](https://rebeccoder.github.io/milestone-project-two/index.html) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
@@ -361,7 +361,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/rebeccoder/milestone-project-one
+$ git clone https://github.com/rebeccoder/milestone-project-two
 ```
 
 7. Press Enter. Your local clone will be created.
