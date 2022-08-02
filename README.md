@@ -3,7 +3,10 @@
 ## Overview
 This app was created for my second milestone project with The Code Institute where I demonstrate what I have learnt so far on their web development course. It is a interactive front end website using HTML, CSS and JavaScript. The websites goal is to be intuitive, user friendly, simple to use and fun. The game is suitable for anyone but it's minimalist design is to be more appealing to adults, to keep give them something to do either on their breaks at works or on the commute or just winding down in the evening. The idea is that it is a super simple, calm game that is familiar and the design is uncluttered and not over stimulating to help rest the mind.
 
-LIVE LINK | 
+LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
+
+<p><img src= "assets/images/multi-device-mockup.jpg"></p>
+
 
 ## User Experience (UX)
 
@@ -335,7 +338,7 @@ As far as I'm aware there are no bugs left in the code, although the accessibili
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/rebeccoder?tab=repositories)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
     - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
