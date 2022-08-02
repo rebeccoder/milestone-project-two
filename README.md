@@ -315,6 +315,14 @@ This was definetely a bit learning curve for me in accessibility and I would def
 
 ### Testing User Stories from UX Section
 
+` 1. As a user, I want to easily understand the main purpose of the app so that I can be sure it's what I was looking for.`
+- Upon landing on the application the user will see that the title is Tic Tac Toe in the tabs, the grid is then obvious in the centre of the page and when hover over the grid they will see naughts and crosses.
+
+`2.  As a user who is an adult and not necessarily very techy, I want to be able to navigate the game easily and intuitively, so that the game is fun and easy and not overcomplicated.`
+- The game is very simply done. The hover elements allows the user to see who's turn it is, the 'not allowed' cursor over the cells that are already filled shows that they are not able to use those cells. Once someone has won the winning message screen appears showing that there is nothing more that can be done in the game unless they press the restart game which will refresh the game for them. 
+
+`3. As a user who is using the app on my lunch break, I want the design to be simple, so that it's a calm game that's not overstimulating.`
+- The design of the game is very simple, it is black and white with nothing too fancy or colourful or distracting. I wanted to keep it very simple and very neutral so that it's not overstimulating, just relaxing.
 
 ### Validating Code
 
@@ -326,7 +334,7 @@ The Javascript code ran through the [Jshint validator](https://jshint.com/) with
 
 The only errors coming back were that I missed a lot of semi-colons on the following lines of code:
 
-12, 13, 23, 24,, 25, 26, 27, 28, 29, 31, 33, 37, 40, 41, 42, 43, 44, 45, 46, 50, 52, 53, 55, 57, 59, 60, 68, 70, 72, 79, 80, 84, 86, 87, 93, 98, 99, 101, 103, 111, 112, 113.
+12, 13, 23, 24, 25, 26, 27, 28, 29, 31, 33, 37, 40, 41, 42, 43, 44, 45, 46, 50, 52, 53, 55, 57, 59, 60, 68, 70, 72, 79, 80, 84, 86, 87, 93, 98, 99, 101, 103, 111, 112, 113.
 
 So I added semi-colons to all these lines detected.
 The other error that came up was "'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." which to my understanding is just an issue with the version of Jshint I was using not a bug in the code itself.
