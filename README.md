@@ -5,7 +5,9 @@ This app was created for my second milestone project with The Code Institute whe
 
 LIVE LINK | 
 
-## User Experience (UX) | User Stories
+## User Experience (UX)
+
+### User Stories
 
 - As a user, I want to easily understand the main purpose of the app so that I can be sure it's what I was looking for.
 - As a user who is an adult and not necessarily very techy, I want to be able to navigate the game easily and intuitively, so that the game is fun and easy and not overcomplicated.
@@ -283,6 +285,27 @@ I did a little research into this
   <p><img src= "assets/images/aria-label-code.jpg"></p>
 
 This was definetely a bit learning curve for me in accessibility and I would definetely not use psuedo elements in something I want to make accessible. What I used may seemed to have work but I'm not sure if it's up to A11Y accessibility standards.
+## Technologies Used
+
+ [HTML Formatter:](https://webformatter.com/html)
+    -  HTML Formatter was used to beautify the code.
+
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+### Frameworks and Programs Used
+
+- [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+-  [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+-  [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+
+
 
 ## Debugging      
 I ran the HTML code through the W3C validator and had no errors.
