@@ -295,6 +295,7 @@ This was definetely a bit learning curve for me in accessibility and I would def
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JAVA SCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks and Programs Used
 
