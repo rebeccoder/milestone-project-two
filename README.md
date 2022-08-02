@@ -262,6 +262,21 @@ To remove that was really easy, I just needed to set a loop through all the cell
   <p><img src= "assets/images/start-game-code-restart.jpg"></p>
 
 Now all the code is functioning exactly how I want it to. So now I want to make the website more accessible and there is where I ran into some trouble.
+Because I used psuedo elements instead of actual text for the X's and O's this causes issues with screen readers as they don't exist within the HTML document, so they were basically completely invisible.
+
+I did a little research into this
+
+ https://html5accessibility.com/stuff/2020/11/07/not-so-short-note-on-aria-label-usage-big-table-edition/
+
+ https://thewebdev.info/2021/08/21/what-is-the-equivalent-of-the-alt-attribute-for-div-elements/
+
+ and with the help of one of the tutors at Code Institute I decided that the best I could do was add a role of "text" to the cell divs and then add an arialabel through Javascript. This was tested on the console and seemed to work so I assume it will work for screen readers. 
+
+  <p><img src= "assets/images/div-role-text-code.jpg"></p>
+
+  <p><img src= "assets/images/aria-label-code.jpg"></p>
+
+This was definetely a bit learning curve for me in accessibility and I would definetely not use psuedo elements in something I want to make accessible. What I used may seemed to have work but I'm not sure if it's up to A11Y accessibility standards.
 
 ## Debugging      
 
