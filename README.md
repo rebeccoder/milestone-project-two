@@ -7,6 +7,9 @@ LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
 
 <p><img src= "assets/images/multi-device-mockup.jpg"></p>
 
+## Design
+
+The design was simple, I didn't need to use any external fonts or pictures. The whole web page was styled with CSS. The design was to keep it as simple yet effective as possible. the colour theme is black and white so there was no need for searching through colour pallets, fonts on google fonts or anything like that. 
 
 ## User Experience (UX)
 
@@ -395,7 +398,5 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 The tic tac toe game was built based on a youtube tutorial:
 
-Build Tic Tac Toe With JavaScript - Tutorial
+[Build Tic Tac Toe With JavaScript - Tutorial](https://www.youtube.com/watch?v=Y-GkMjUZsmM)
 by Web Dev Simplified
-
-https://www.youtube.com/watch?v=Y-GkMjUZsmM
