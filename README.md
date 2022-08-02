@@ -5,6 +5,12 @@ This app was created for my second milestone project with The Code Institute whe
 
 LIVE LINK | 
 
+## User Experience (UX) | User Stories
+
+- As a user, I want to easily understand the main purpose of the app so that I can be sure it's what I was looking for.
+- As a user who is an adult and not necessarily very techy, I want to be able to navigate the game easily and intuitively, so that the game is fun and easy and not overcomplicated.
+- As a user who is using the app on my lunch break, I want the design to be simple, so that it's a calm game that's not overstimulating.
+
 ## Wireframes
 
 The website was designed on a wireframe software called Balsamiq.
