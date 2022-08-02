@@ -316,6 +316,8 @@ This was definetely a bit learning curve for me in accessibility and I would def
 ### Testing User Stories from UX Section
 
 
+### Validating Code
+
 I ran the HTML code through the [W3C validator](https://validator.w3.org/) and had no errors.
 
 And the CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors.
@@ -329,7 +331,7 @@ The only errors coming back were that I missed a lot of semi-colons on the follo
 So I added semi-colons to all these lines detected.
 The other error that came up was "'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." which to my understanding is just an issue with the version of Jshint I was using not a bug in the code itself.
 
-
+### Known Bugs
 As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
 
 ## Deployment
