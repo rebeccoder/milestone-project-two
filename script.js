@@ -54,16 +54,39 @@ function handleClick(e) {
 
 
 function endGame(draw) {
-    /* 
-     * winning message
+    /*
+    * shows the winning message
     */
+   let winningMessage = "";
+   let icon = "";
+
     if (draw) {
-        winningMessageTextElement.innerText = 'Draw!';
+        winningMessage = 'Draw!';
+        icon = "info";
     } else {
-        winningMessageTextElement.innerText = `${circleTurn ? "O's" : "X's"} Win!`;
+        winningMessage = `${circleTurn ? "O's" : "X's"} Win!`;
+        icon = "success";
     }
-    winningMessageElement.classList.add('show');
-}
+
+    Swal.fire({
+        position: "center",
+        icon: icon,
+        title: winningMessage,
+        allowOutsideClick: false,
+        showConfirmButoon: true,
+        showDenyButton: false,
+        showCancelButton: true,
+        confirmButtonText: "Play Again",
+        cancelButtonText: "Return to Main Menu",
+    }).then((result) => {
+        if (result.isDenied) {
+            startGame();
+        } else if (result.isDismissed) {
+            gameArea.classList.add("hide");
+            welcomeArea.classList.remove("hide");
+        }
+    })
+} 
 
 // shows winning message if there is a draw
 function isDraw() {
@@ -74,10 +97,10 @@ function isDraw() {
 }
 
 
-    function placeMark(cell, currentClass) {
-        /*
-         * allows to enter x or o to the cell
-        */
+function placeMark(cell, currentClass) {
+    /*
+     * allows to enter x or o to the cell
+    */
     cell.classList.add(currentClass);
     cell.ariaLabel = X_CLASS;
     cell.ariaLabel = CIRCLE_CLASS;
@@ -104,6 +127,7 @@ function setBoardHoverClass() {
         board.classList.add(X_CLASS);
     }
 }
+
 
 function checkWin(currentClass) {
     /* 
