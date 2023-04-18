@@ -22,10 +22,10 @@ startGame();
 restartButton.addEventListener('click', startGame);
 
 function startGame() {
-// starts game on x's turn
-  circleTurn = false;
-// this code only ever fires this event listener once. so if you clicked on a cell once it will not fire up the event again. 
-  cellElements.forEach(cell => {
+    /* 
+     * starts game
+    */
+  circleTurn = false;  cellElements.forEach(cell => {
     cell.classList.remove(X_CLASS);
     cell.classList.remove(CIRCLE_CLASS);
     cell.removeEventListener('click', handleClick);
@@ -36,8 +36,10 @@ function startGame() {
 }
 
 function handleClick(e) {
+    /* 
+     * displays the board of whoevers turn it is
+    */
     const cell = e.target;
-// if its circles turn show circle board or if not show x's board
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
     placeMark(cell, currentClass);
     if (checkWin(currentClass)) {
@@ -51,8 +53,10 @@ function handleClick(e) {
 }
 
 
-// shows winning message when x's or o's wins
 function endGame(draw) {
+    /* 
+     * winning message
+    */
     if (draw) {
         winningMessageTextElement.innerText = 'Draw!';
     } else {
@@ -68,22 +72,30 @@ function isDraw() {
         cell.classList.contains(CIRCLE_CLASS);
     });
 }
-//placemark allows you to enter the x or circle into the cell 
+
+
     function placeMark(cell, currentClass) {
+        /*
+         * allows to enter x or o to the cell
+        */
     cell.classList.add(currentClass);
-//This allows screen readers to see whether it is an x or an 0
     cell.ariaLabel = X_CLASS;
     cell.ariaLabel = CIRCLE_CLASS;
     cell.ariaLabel = currentClass;
 }
 
-// switches turns from x and circle
 function swapTurns() {
+    /* 
+     * changes turn
+    */
     circleTurn = !circleTurn;
 }
 
-// adds the correct hover effect to each board 
+
 function setBoardHoverClass() {
+    /* 
+     * adds the correct hover effect
+    */
     board.classList.remove(X_CLASS);
     board.classList.remove(CIRCLE_CLASS);
     if (circleTurn) {
@@ -93,8 +105,10 @@ function setBoardHoverClass() {
     }
 }
 
-// so if any of the winning combinations happen then it will be recognised as a win
 function checkWin(currentClass) {
+    /* 
+     * checks for winning combos
+    */
     return WINNING_COMBINATIONS.some(combination => {
         return combination.every(index => {
         return cellElements[index].classList.contains(currentClass);
