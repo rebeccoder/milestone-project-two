@@ -103,7 +103,7 @@ function endGame(draw) {
         winningMessage = 'Draw!';
         icon = "info";
     } else {
-        winningMessage = `${circleTurn ? "O's" : "X's"} Win!`;
+        winningMessage = `${circleTurn ? `${player2Name}` : `${player1Name}`} Wins!`;
         icon = "success";
     }
 
