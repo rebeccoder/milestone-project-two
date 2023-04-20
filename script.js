@@ -26,9 +26,9 @@ function startGame(event) {
     /* 
      * starts game
     */
-    if (event) {
-      event.preventDefault();
-    }
+    if (event !== null && event !== undefined) {
+        event.preventDefault();
+      }
     document.getElementById("gameArea").removeAttribute("hidden");
 
     const cells = document.querySelectorAll('#board [data-cell]');
@@ -93,6 +93,7 @@ function handleClick(e) {
 
 
 function endGame(draw) {
+    console.log("hello world")
     /*
     * shows the winning message
     */
@@ -112,14 +113,14 @@ function endGame(draw) {
         icon: icon,
         title: winningMessage,
         allowOutsideClick: false,
-        showConfirmButon: true,
+        showConfirmButton: true,
         showDenyButton: true,
         showCancelButton: false,
         confirmButtonText: "Play Again",
         denyButtonText: "Return to Main Menu",
     }).then((result) => {
         if (result.isConfirmed) {
-            startGame();
+            startGame(null);
         } else if (result.isDenied) {
             returnToMenu();
         }
