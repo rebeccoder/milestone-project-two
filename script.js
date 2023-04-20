@@ -31,6 +31,14 @@ function startGame(event) {
     }
     document.getElementById("gameArea").removeAttribute("hidden");
 
+    const cells = document.querySelectorAll('#board [data-cell]');
+    cells.forEach(cell => {
+        cell.classList.remove('x');
+        cell.classList.remove('circle');
+        cell.removeAttribute('data-marked-by');
+        cell.textContent = '';
+      });
+
     // Get the player names from the form
     player1Name = document.getElementById('player1Name').value;
     player2Name = document.getElementById('player2Name').value;
@@ -64,6 +72,8 @@ function startGame(event) {
         cell.addEventListener('click', handleClick, { once: true });
         console.log('Event listener added to cell:', cell);
     });
+
+
 }
 
 
