@@ -21,35 +21,35 @@ const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
 
 
-    function startGame(event) { 
-        console.log("hello world")
+function startGame(event) {
+
     /* 
      * starts game
     */
-        if (event) {
-          event.preventDefault();
-        }
-        document.getElementById("gameArea").removeAttribute("hidden");
+    if (event) {
+      event.preventDefault();
+    }
+    document.getElementById("gameArea").removeAttribute("hidden");
 
-        // Get the player names from the form
-        player1Name = document.getElementById('player1Name').value;
-        player2Name = document.getElementById('player2Name').value;
+    // Get the player names from the form
+    player1Name = document.getElementById('player1Name').value;
+    player2Name = document.getElementById('player2Name').value;
         
-        // Assign player 1 to X_CLASS and player 2 to CIRCLE_CLASS
-        board.classList.add(X_CLASS);
-        board.classList.remove(CIRCLE_CLASS);
+    // Assign player 1 to X_CLASS and player 2 to CIRCLE_CLASS
+    board.classList.add(X_CLASS);
+    board.classList.remove(CIRCLE_CLASS);
 
-        // Hide the welcome area and show the game area
-        welcomeArea.style.display = 'none';
-        gameArea.style.display = 'block';
+    // Hide the welcome area and show the game area
+    welcomeArea.style.display = 'none';
+    gameArea.style.display = 'block';
         
-        // Display player 1's name below the board
-        const currentPlayer = document.getElementById('currentPlayer');
+    // Display player 1's name below the board
+    const currentPlayer = document.getElementById('currentPlayer');
         
-        // Add scoreboards below the names
-        const scoreBoard = document.getElementById('scoreBoard');
-        scoreBoard.innerHTML = `
-          <div>
+    // Add scoreboards below the names
+    const scoreBoard = document.getElementById('scoreBoard');
+    scoreBoard.innerHTML = `
+        <div>
             <h2>${player1Name} Wins:</h2>
             <span id="player1Score">0</span>
           </div>
@@ -59,27 +59,27 @@ playersForm.addEventListener('submit', startGame);
           </div>
         `;
       
-        // Add click event listener to each cell element
-        cellElements.forEach(cell => {
-          cell.addEventListener('click', handleClick, { once: true });
-          console.log('Event listener added to cell:', cell);
-        });
-      }
+    // Add click event listener to each cell element
+    cellElements.forEach(cell => {
+        cell.addEventListener('click', handleClick, { once: true });
+        console.log('Event listener added to cell:', cell);
+    });
+}
 
 
-      function handleClick(e) {
-        const cell = e.target;
-        const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
-        placeMark(cell, currentClass);
-        if (checkWin(currentClass)) {
-          endGame(false);
-        } else if (isDraw()) {
-          endGame(true);
-        } else {
-          swapTurns();
-          setBoardHoverClass();
-        }
-      }
+function handleClick(e) {
+    const cell = e.target;
+    const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
+    placeMark(cell, currentClass);
+    if (checkWin(currentClass)) {
+      endGame(false);
+    } else if (isDraw()) {
+      endGame(true);
+    } else {
+      swapTurns();
+      setBoardHoverClass();
+    }
+}
 
 
 function endGame(draw) {
@@ -111,12 +111,12 @@ function endGame(draw) {
         if (result.isConfirmed) {
             startGame();
         } else if (result.isDenied) {
-            returnToMainMenu();
+            returnToMenu();
         }
     })
 } 
 
-function returnToMainMenu() {
+function returnToMenu() {
       welcomeArea.style.display = 'block';
       gameArea.style.display = 'none';
       playersForm.reset();
