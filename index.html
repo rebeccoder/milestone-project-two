@@ -22,9 +22,9 @@
       
           <button type="submit">Start Game</button>
         </form>
-      </div>
+    </div>
 
-      <div id="gameArea">
+    <div id="gameArea" hidden>
         <h2 id="currentPlayer"></h2>
         <!-- tic tac toe board -->
         <div class="board x" id="board">
@@ -41,11 +41,12 @@
         <button id="restartButton">Restart Game</button>
       </div>
           <!-- score board-->
-    <div id="scoreBoard">
-        <h2>Scoreboard</h2>
-        <div id="player1Score">Player 1: <span>0</span></div>
-        <div id="player2Score">Player 2: <span>0</span></div>
-        <div id="draws">Draws: <span>0</span></div>
+        <div id="scoreBoard">
+            <h2>Scoreboard</h2>
+            <div id="player1Score">Player 1: <span>0</span></div>
+            <div id="player2Score">Player 2: <span>0</span></div>
+            <div id="draws">Draws: <span>0</span></div>
+        </div>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

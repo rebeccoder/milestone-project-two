@@ -21,7 +21,6 @@ const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
 
 
-   
     function startGame(event) { 
     /* 
      * starts game
@@ -37,6 +36,10 @@ playersForm.addEventListener('submit', startGame);
         // Assign player 1 to X_CLASS and player 2 to CIRCLE_CLASS
         board.classList.add(X_CLASS);
         board.classList.remove(CIRCLE_CLASS);
+
+        // Hide the welcome area and show the game area
+        welcomeArea.style.display = 'none';
+        gameArea.style.display = 'block';
         
         // Display player 1's name below the board
         const currentPlayer = document.getElementById('currentPlayer');
