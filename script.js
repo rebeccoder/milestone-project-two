@@ -22,13 +22,15 @@ playersForm.addEventListener('submit', startGame);
 
 
     function startGame(event) { 
+        console.log("hello world")
     /* 
      * starts game
     */
         if (event) {
           event.preventDefault();
         }
-        
+        document.getElementById("gameArea").removeAttribute("hidden");
+
         // Get the player names from the form
         player1Name = document.getElementById('player1Name').value;
         player2Name = document.getElementById('player2Name').value;
@@ -110,24 +112,29 @@ function endGame(draw) {
         if (result.isConfirmed) {
             startGame();
         } else if (result.isDenied) {
-            hideBoard();
-            displayWelcomePage();
+            returnToMainMenu();
         }
     })
 } 
 
-function hideBoard() {
-    /*
-     * removes board from screen
-    */
-    board.style.display = "none";
-}
+function returnToMainMenu() {
+  // hide the gameArea
+  gameArea.style.display = 'none';
+  
+  // show the startMenu
+  welcomeArea.style.display = 'block';
 
-function displayWelcomePage() {
-    /*
-     * brings menu page back up
-    */
-    document.getElementById("welcomeArea").style.display = "block";
+  // clear the board
+  boardX.classList.remove('active');
+  boardCircle.classList.remove('active');
+  boardX.innerHTML = '';
+  boardCircle.innerHTML = '';
+
+  // reset the game variables
+  gameIsLive = true;
+  currentPlayer = 'X';
+  gameState = ['', '', '', '', '', '', '', '', ''];
+  winningMessageElement.classList.remove('show');
 }
 
 // shows winning message if there is a draw
