@@ -25,7 +25,8 @@ function startGame() {
     /* 
      * starts game
     */
-  circleTurn = false;  cellElements.forEach(cell => {
+    welcomeArea.style.display = "none";
+    circleTurn = false;  cellElements.forEach(cell => {
     cell.classList.remove(X_CLASS);
     cell.classList.remove(CIRCLE_CLASS);
     cell.removeEventListener('click', handleClick);
@@ -73,20 +74,62 @@ function endGame(draw) {
         icon: icon,
         title: winningMessage,
         allowOutsideClick: false,
-        showConfirmButoon: true,
-        showDenyButton: false,
-        showCancelButton: true,
+        showConfirmButon: true,
+        showDenyButton: true,
+        showCancelButton: false,
         confirmButtonText: "Play Again",
-        cancelButtonText: "Return to Main Menu",
+        denyButtonText: "Return to Main Menu",
     }).then((result) => {
-        if (result.isDenied) {
+        if (result.isConfirmed) {
             startGame();
-        } else if (result.isDismissed) {
-            gameArea.classList.add("hide");
-            welcomeArea.classList.remove("hide");
+        } else if (result.isDenied) {
+            hideBoard();
+            displayWelcomePage();
         }
     })
 } 
+
+function hideBoard() {
+    /*
+     * removes board from screen
+    */
+    board.style.display = "none";
+}
+
+function displayWelcomePage() {
+    /*
+     * brings menu page back up
+    */
+    document.getElementById("welcomeArea").style.display = "block";
+}
+
+function hideBoard() {
+    /*
+     * removes board from screen
+    */
+    board.style.display = "none";
+}
+
+function displayWelcomePage() {
+    /*
+     * brings menu page back up
+    */
+    document.getElementById("welcomeArea").style.display = "block";
+}
+
+function hideBoard() {
+    /*
+     * removes board from screen
+    */
+    board.style.display = "none";
+}
+
+function displayWelcomePage() {
+    /*
+     * brings menu page back up
+    */
+    document.getElementById("welcomeArea").style.display = "block";
+}
 
 // shows winning message if there is a draw
 function isDraw() {
