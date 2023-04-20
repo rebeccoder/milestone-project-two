@@ -20,12 +20,12 @@ let player2Name;
 const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
 
-startGame();
 
+   
+    function startGame(event) { 
     /* 
      * starts game
     */
-    function startGame(event) {
         if (event) {
           event.preventDefault();
         }
@@ -40,7 +40,6 @@ startGame();
         
         // Display player 1's name below the board
         const currentPlayer = document.getElementById('currentPlayer');
-        currentPlayer.textContent = player1Name;
         
         // Add scoreboards below the names
         const scoreBoard = document.getElementById('scoreBoard');
@@ -58,6 +57,7 @@ startGame();
         // Add click event listener to each cell element
         cellElements.forEach(cell => {
           cell.addEventListener('click', handleClick, { once: true });
+          console.log('Event listener added to cell:', cell);
         });
       }
 
@@ -66,7 +66,6 @@ startGame();
         console.log("hello world")
         const cell = e.target;
         const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
-      
         placeMark(cell, currentClass);
         if (checkWin(currentClass)) {
           endGame(false);
@@ -75,8 +74,6 @@ startGame();
         } else {
           swapTurns();
           setBoardHoverClass();
-          const currentPlayer = document.getElementById('currentPlayer');
-          currentPlayer.textContent = circleTurn ? player2Name : player1Name;
         }
       }
 
@@ -130,34 +127,6 @@ function displayWelcomePage() {
     document.getElementById("welcomeArea").style.display = "block";
 }
 
-function hideBoard() {
-    /*
-     * removes board from screen
-    */
-    board.style.display = "none";
-}
-
-function displayWelcomePage() {
-    /*
-     * brings menu page back up
-    */
-    document.getElementById("welcomeArea").style.display = "block";
-}
-
-function hideBoard() {
-    /*
-     * removes board from screen
-    */
-    board.style.display = "none";
-}
-
-function displayWelcomePage() {
-    /*
-     * brings menu page back up
-    */
-    document.getElementById("welcomeArea").style.display = "block";
-}
-
 // shows winning message if there is a draw
 function isDraw() {
     return [...cellElements].every(cell => {
@@ -171,8 +140,8 @@ function placeMark(cell, currentClass) {
     console.log('Placing mark in cell:', cell);
     console.log('Current class:', currentClass);
     cell.classList.add(currentClass);
-    cell.innerHTML = currentClass === X_CLASS ? player1Name : player2Name;
-  }
+    cell.innerText = currentClass === X_CLASS ? 'X' : 'O';
+}
   
 
 function swapTurns() {
