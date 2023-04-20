@@ -68,7 +68,6 @@ playersForm.addEventListener('submit', startGame);
 
 
       function handleClick(e) {
-        console.log("hello world")
         const cell = e.target;
         const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
         placeMark(cell, currentClass);
@@ -118,24 +117,13 @@ function endGame(draw) {
 } 
 
 function returnToMainMenu() {
-  // hide the gameArea
-  gameArea.style.display = 'none';
-  
-  // show the startMenu
-  welcomeArea.style.display = 'block';
-
-  // clear the board
-  boardX.classList.remove('active');
-  boardCircle.classList.remove('active');
-  boardX.innerHTML = '';
-  boardCircle.innerHTML = '';
-
-  // reset the game variables
-  gameIsLive = true;
-  currentPlayer = 'X';
-  gameState = ['', '', '', '', '', '', '', '', ''];
-  winningMessageElement.classList.remove('show');
+      welcomeArea.style.display = 'block';
+      gameArea.style.display = 'none';
+      playersForm.reset();
+      const scoreBoard = document.getElementById('scoreBoard');
+      scoreBoard.innerHTML = '';
 }
+
 
 // shows winning message if there is a draw
 function isDraw() {
