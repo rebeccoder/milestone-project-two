@@ -29,8 +29,14 @@
     </div>
 
     <div id="gameArea" hidden>
-        <h2 id="currentPlayer"></h2>
         <!-- tic tac toe board -->
+        <div id="scoreBoard">
+            <h2>Score Board</h2>
+            <p id="player1Score">Player 1:</p>
+            <p id="player2Score">Player 2:</p>
+            
+          </div>
+
         <div class="board x" id="board">
           <div class="cell" data-cell></div>
           <div class="cell" data-cell></div>
@@ -42,14 +48,10 @@
           <div class="cell" data-cell></div>
           <div class="cell" data-cell></div>
         </div>
-        <div id="scoreBoard">
-            <h2>Score Board</h2>
-            <p id="player1Score">Player 1:</p>
-            <p id="player2Score">Player 2:</p>
+        <div class ="button-area">
+            <button class= "game-buttons" onclick="startGame()">Restart Game</button>
+            <button class= "game-buttons" onclick="returnToMenu()">Return to Main Menu</button>
           </div>
-            <button onclick="startGame()">Restart Game</button>
-            <button onclick="returnToMenu()">Return to Main Menu</button>
-
 
     </div>
 

@@ -47,7 +47,7 @@ body {
 
 .board {
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: grid;
 /*justify-content and align-content centers everything on the board inside the board div */
     justify-content: center;
@@ -156,35 +156,42 @@ body {
     background-color:white;
 }
 
-.winning-message {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color:rgba(0, 0, 0, .9);
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 5rem;
-    flex-direction: column;
-}
-
-.winning-message button {
-    font-size: 3rem;
+#scoreBoard {
+    color: black;
     background-color: white;
-    border: 1px solid black;
-    padding: .25em .5em;
-    cursor: pointer;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
 }
 
-.winning-message button:hover {
-    background-color: black;
+.button-area {
+    float: right;
+}
+
+.game-buttons {
     color: white;
-    border-color: white;
+    background-color: black;
+    border-radius: 12px;
+    border: solid 5px black;
+    font-size: 110%;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    margin: 5px;
 }
 
-.winning-message.show {
-    display:flex;
+.swal2-title {
+    font-size: 24px;
+    color: black !important;
+    font-family: 'Oswald';
+    text-transform: capitalize !important;
 }
+
+.swal2-success-ring {
+    border: black !important;
+}
+
+.swal2-confirm, 
+.swal2-deny {
+    background-color: black !important;
+}
+

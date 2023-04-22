@@ -185,3 +185,8 @@ function checkWin(currentClass) {
          });
     });
 }
+
+function displayCurrentPlayer(currentTurn) {
+    const currentPlayerElem = document.getElementById("currentPlayer");
+    currentPlayerElem.textContent = `${circleTurn ? `${player2Name}` : `${player1Name}`}'s Turn!`
+}
