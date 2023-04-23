@@ -16,6 +16,7 @@ const welcomeArea = document.getElementById('welcomeArea');
 let circleTurn;
 let player1Name;
 let player2Name;
+let currentPlayer;
 
 const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
@@ -50,10 +51,11 @@ function startGame(event) {
     // Hide the welcome area and show the game area
     welcomeArea.style.display = 'none';
     gameArea.style.display = 'block';
-        
-    // Display player 1's name below the board
-    const currentPlayer = document.getElementById('currentPlayer');
-        
+    
+    // display player1 name initially
+    currentPlayer = player1Name;
+    displayCurrentPlayer();
+
     // Add scoreboards below the names
     const scoreBoard = document.getElementById('scoreBoard');
     scoreBoard.innerHTML = `
@@ -73,7 +75,11 @@ function startGame(event) {
         console.log('Event listener added to cell:', cell);
     });
 
+    // Set initial player
+    circleTurn = false;
+    currentPlayer = player1Name;
 
+    displayCurrentPlayer();
 }
 
 
@@ -158,6 +164,8 @@ function swapTurns() {
      * changes turn
     */
     circleTurn = !circleTurn;
+    currentPlayer = circleTurn ? player2Name : player1Name;
+    displayCurrentPlayer();
 }
 
 
@@ -186,7 +194,7 @@ function checkWin(currentClass) {
     });
 }
 
-function displayCurrentPlayer(currentTurn) {
+function displayCurrentPlayer() {
     const currentPlayerElem = document.getElementById("currentPlayer");
-    currentPlayerElem.textContent = `${circleTurn ? `${player2Name}` : `${player1Name}`}'s Turn!`
-}
+    currentPlayerElem.innerHTML = `${currentPlayer}'s turn`;
+  }
