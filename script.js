@@ -17,6 +17,8 @@ let circleTurn;
 let player1Name;
 let player2Name;
 let currentPlayer;
+let player1Score = 0;
+let player2Score = 0;
 
 const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
@@ -114,6 +116,7 @@ function endGame(draw) {
     } else {
         winningMessage = `${circleTurn ? `${player2Name}` : `${player1Name}`} Wins!`;
         icon = "success";
+        handleWin(circleTurn ? 'player2' : 'player1');
     }
 
     Swal.fire({
@@ -132,9 +135,22 @@ function endGame(draw) {
         } else if (result.isDenied) {
             returnToMenu();
         }
+        // update the scoreboards after each turn
+        document.getElementById('player1Score').innerHTML = player1Score;
+        document.getElementById('player2Score').innerHTML = player2Score;
     })
+    
 } 
-
+function handleWin(player) {
+    if (player === 'player1') {
+      player1Score += 1;
+      document.getElementById('player1Score').innerHTML = player1Score;
+    } else if (player === 'player2') {
+      player2Score += 1;
+      document.getElementById('player2Score').innerHTML = player2Score;
+    }
+  }
+  
 function returnToMenu() {
       welcomeArea.style.display = 'block';
       gameArea.style.display = 'none';
