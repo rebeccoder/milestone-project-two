@@ -23,7 +23,7 @@ let player2Score = 0;
 const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
 
-const restartButton = document.getElementById('restartButton');
+const restartButton = document.getElementById('resetButton');
 restartButton.addEventListener('click', resetGame);
 
 function startGame(event) {
