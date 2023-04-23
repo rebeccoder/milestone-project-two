@@ -8,7 +8,7 @@
         content="Play the traditional Tic Tac Toe game for free online on your computer or on your phone!" />
     <meta name="keywords"
         content="tic tac toe, naughts and crosses, x's and o's, games, boardgames, educational games"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
@@ -25,6 +25,7 @@
           <input type="text" id="player2Name" name="player2Name" required><br><br>
       
           <button class="home-buttons" type="submit">Start Game</button>
+          <button class="home-buttons" onclick="instructionsPage()">Read Instructions</button>
         </form>
     </div>
 
@@ -47,14 +48,29 @@
             <p id="player1Score">Player 1:</p>
             <p id="player2Score">Player 2:</p>
         </div>
-
         <div class ="button-area">
-            <button class= "game-buttons" id="resetButton"onclick="startGame()">Reset Game</button>
+            <button class= "game-buttons" id="resetButton" onclick="startGame()">Reset Game</button>
             <button class= "game-buttons" onclick="returnToMenu()">Return to Main Menu</button>
           </div>
-
     </div>
 
+
+    <div class="instructions" id="instructions" hidden>
+        <h1 class= "logo">Tic<br>Tac<br>Toe<br></h1>
+        <p>
+            On the Main Menu enter two names for the players for this game. Player One wil be assigned X's and Player 2 will be assigned O's.<br><br>
+            1. Press "Start Game" and the game board will appear on the screen. There are nine squares arranged in a 3x3 grid.<br>
+            2. Player 1 starts by clicking on an empty square on the game board. The square will then be filled with an "X".<br>
+            3. Player 2 takes their turn by clicking on an empty square on the game board. The square will be filled with an "O".<br>
+            4. Players continue taking turns until one of them gets three of their symbols in a row horizontally, vertically, or diagonally.<br><br>
+            
+            If a player gets three of their symbols in a row, they win the game!<br>
+            If all of the squares on the game board are filled and no player has won, the game is a draw.<br>
+            Each time someone wins it will be added to the scoreboard until the game is reset.<br><br>
+        </p>
+        <p style="color: red;"> May the best player win!</p>
+        <button class= "game-buttons" onclick="returnToMenu()">Return to Main Menu</button>
+        </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="script.js"></script>
 

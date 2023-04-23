@@ -13,6 +13,7 @@ const WINNING_COMBINATIONS = [
 const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.getElementById('board');
 const welcomeArea = document.getElementById('welcomeArea');
+const instructionsArea = document.getElementById('instructions')
 let circleTurn;
 let player1Name;
 let player2Name;
@@ -89,6 +90,12 @@ function startGame(event) {
     displayCurrentPlayer();
 }
 
+function instructionsPage() {
+    document.getElementById("instructions").removeAttribute("hidden");
+    welcomeArea.style.display = 'none';
+    gameArea.style.display = 'none';
+    instructionsArea = "block";
+}
 
 function handleClick(e) {
     const cell = e.target;

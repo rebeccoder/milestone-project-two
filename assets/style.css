@@ -29,6 +29,13 @@ body {
     font-size: large;
   }
 
+.instructions {
+    color: white;
+    text-align:center;
+    font-size: larger;
+    font-family: 'Oswald', sans-serif;
+}
+
 .logo {
     font-size: 4em;
     font-family: 'Oswald', sans-serif;
