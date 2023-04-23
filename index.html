@@ -24,19 +24,14 @@
           <label for="player2Name">Player 2 Name:</label><br><br>
           <input type="text" id="player2Name" name="player2Name" required><br><br>
       
-          <button class="homepage-button" type="submit">Start Game</button>
+          <button class="home-buttons" type="submit">Start Game</button>
         </form>
     </div>
 
     <div id="gameArea" hidden>
+        <h1 class="logo"> Tic<br>Tac<br>Toe</h1>
         <!-- tic tac toe board -->
-        <div id="scoreBoard">
-            <h2>Score Board</h2>
-            <p id="player1Score">Player 1:</p>
-            <p id="player2Score">Player 2:</p>
-            
-          </div>
-
+        <h2 id= "currentPlayer"></h2>
         <div class="board x" id="board">
           <div class="cell" data-cell></div>
           <div class="cell" data-cell></div>
@@ -48,10 +43,14 @@
           <div class="cell" data-cell></div>
           <div class="cell" data-cell></div>
         </div>
+        <div id="scoreBoard">
+            <p id="player1Score">Player 1:</p>
+            <p id="player2Score">Player 2:</p>
+        </div>
+
         <div class ="button-area">
             <button class= "game-buttons" onclick="startGame()">Restart Game</button>
             <button class= "game-buttons" onclick="returnToMenu()">Return to Main Menu</button>
-            <h2 id= "currentPlayer"></h2>
           </div>
 
     </div>

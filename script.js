@@ -29,7 +29,7 @@ function startGame(event) {
     */
     circleTurn = false;
     currentPlayer = player1Name;
-    
+
     if (event !== null && event !== undefined) {
         event.preventDefault();
       }
@@ -63,11 +63,11 @@ function startGame(event) {
     const scoreBoard = document.getElementById('scoreBoard');
     scoreBoard.innerHTML = `
         <div>
-            <h2>${player1Name} Wins:</h2>
+            <h2>${player1Name}'s Score:</h2>
             <span id="player1Score">0</span>
           </div>
           <div>
-            <h2>${player2Name} Wins:</h2>
+            <h2>${player2Name}'s Score:</h2>
             <span id="player2Score">0</span>
           </div>
         `;
