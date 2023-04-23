@@ -27,6 +27,9 @@ function startGame(event) {
     /* 
      * starts game
     */
+    circleTurn = false;
+    currentPlayer = player1Name;
+    
     if (event !== null && event !== undefined) {
         event.preventDefault();
       }
@@ -76,8 +79,7 @@ function startGame(event) {
     });
 
     // Set initial player
-    circleTurn = false;
-    currentPlayer = player1Name;
+
 
     displayCurrentPlayer();
 }
