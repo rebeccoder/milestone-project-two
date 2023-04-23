@@ -23,8 +23,11 @@ let player2Score = 0;
 const playersForm = document.getElementById('playersForm');
 playersForm.addEventListener('submit', startGame);
 
+const restartButton = document.getElementById('restartButton');
+restartButton.addEventListener('click', resetGame);
 
 function startGame(event) {
+
 
     /* 
      * starts game
@@ -141,6 +144,8 @@ function endGame(draw) {
     })
     
 } 
+
+
 function handleWin(player) {
     if (player === 'player1') {
       player1Score += 1;
@@ -159,6 +164,14 @@ function returnToMenu() {
       scoreBoard.innerHTML = '';
 }
 
+function resetGame() {
+    // Reset the player scores
+    player1Score = 0;
+    player2Score = 0;
+    document.getElementById('player1Score').innerHTML = player1Score;
+    document.getElementById('player2Score').innerHTML = player2Score;
+    startGame();
+}
 
 // shows winning message if there is a draw
 function isDraw() {
