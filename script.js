@@ -28,11 +28,17 @@ const restartButton = document.getElementById('resetButton');
 restartButton.addEventListener('click', resetGame);
 
 function startGame(event) {
+    console.log("game started")
 
 
     /* 
      * starts game
     */
+
+    // Get the player names from the form
+    player1Name = document.getElementById('player1Name').value;
+    player2Name = document.getElementById('player2Name').value;
+    
     circleTurn = false;
     currentPlayer = player1Name;
 
@@ -49,16 +55,14 @@ function startGame(event) {
         cell.textContent = '';
       });
 
-    // Get the player names from the form
-    player1Name = document.getElementById('player1Name').value;
-    player2Name = document.getElementById('player2Name').value;
         
     // Assign player 1 to X_CLASS and player 2 to CIRCLE_CLASS
     board.classList.add(X_CLASS);
     board.classList.remove(CIRCLE_CLASS);
 
-    // Hide the welcome area and show the game area
+    // Hide the welcome area and isntructions and show the game area
     welcomeArea.style.display = 'none';
+    instructionsArea.style.display = 'none';
     gameArea.style.display = 'block';
     
     // display player1 name initially
@@ -94,7 +98,7 @@ function instructionsPage() {
     document.getElementById("instructions").removeAttribute("hidden");
     welcomeArea.style.display = 'none';
     gameArea.style.display = 'none';
-    instructionsArea = "block";
+    instructionsArea.style.display = 'block';
 }
 
 function handleClick(e) {
@@ -166,6 +170,7 @@ function handleWin(player) {
 function returnToMenu() {
       welcomeArea.style.display = 'block';
       gameArea.style.display = 'none';
+      instructionsArea.style.display = 'none';
       playersForm.reset();
       const scoreBoard = document.getElementById('scoreBoard');
       scoreBoard.innerHTML = '';
