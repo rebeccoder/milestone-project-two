@@ -27,15 +27,15 @@ playersForm.addEventListener('submit', startGame);
 const restartButton = document.getElementById('resetButton');
 restartButton.addEventListener('click', resetGame);
 
+
 function startGame(event) {
-    console.log("game started")
-
-
-    /* 
-     * starts game
+    /**
+    * Get players' names from the form and assign player 1 with X class and player 2 with Circle class. 
+    * Hide the welcome and instruction area, set up the board and scoreboard with X to start the game.
+    * @param event: A DOM event object
+    * @return: None
     */
 
-    // Get the player names from the form
     player1Name = document.getElementById('player1Name').value;
     player2Name = document.getElementById('player2Name').value;
     
@@ -55,21 +55,16 @@ function startGame(event) {
         cell.textContent = '';
       });
 
-        
-    // Assign player 1 to X_CLASS and player 2 to CIRCLE_CLASS
     board.classList.add(X_CLASS);
     board.classList.remove(CIRCLE_CLASS);
 
-    // Hide the welcome area and isntructions and show the game area
     welcomeArea.style.display = 'none';
     instructionsArea.style.display = 'none';
     gameArea.style.display = 'block';
     
-    // display player1 name initially
     currentPlayer = player1Name;
     displayCurrentPlayer();
 
-    // Add scoreboards below the names
     const scoreBoard = document.getElementById('scoreBoard');
     scoreBoard.innerHTML = `
         <div>
@@ -81,20 +76,19 @@ function startGame(event) {
             <span id="player2Score">0</span>
           </div>
         `;
-      
-    // Add click event listener to each cell element
     cellElements.forEach(cell => {
         cell.addEventListener('click', handleClick, { once: true });
         console.log('Event listener added to cell:', cell);
     });
-
-    // Set initial player
-
-
     displayCurrentPlayer();
 }
 
+
 function instructionsPage() {
+    /**
+     * Displays the instructions page and hides the welcome and game pages.
+     * @return: None
+    */
     document.getElementById("instructions").removeAttribute("hidden");
     welcomeArea.style.display = 'none';
     gameArea.style.display = 'none';
@@ -102,6 +96,11 @@ function instructionsPage() {
 }
 
 function handleClick(e) {
+    /**
+     * Handles the click event when the player clicks on a cell.
+     * @param {Object} e - The event object.
+     * @returns {undefined}
+     */
     const cell = e.target;
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
     placeMark(cell, currentClass);
@@ -117,10 +116,11 @@ function handleClick(e) {
 
 
 function endGame(draw) {
-    console.log("hello world")
-    /*
-    * shows the winning message
-    */
+    /**
+     * Shows the winning message and updates the scoreboard.
+     * @param {boolean} draw - Indicates if the game ended in a draw.
+     * @return {void} 
+     */
    let winningMessage = "";
    let icon = "";
 
@@ -132,7 +132,6 @@ function endGame(draw) {
         icon = "success";
         handleWin(circleTurn ? 'player2' : 'player1');
     }
-
     Swal.fire({
         position: "center",
         icon: icon,
@@ -149,7 +148,6 @@ function endGame(draw) {
         } else if (result.isDenied) {
             returnToMenu();
         }
-        // update the scoreboards after each turn
         document.getElementById('player1Score').innerHTML = player1Score;
         document.getElementById('player2Score').innerHTML = player2Score;
     })
@@ -158,6 +156,11 @@ function endGame(draw) {
 
 
 function handleWin(player) {
+    /**
+     * Updates the scoreboard with the win for the relevant player.
+     * @param {string} player - The identifier for the player who won (either 'player1' or 'player2').
+     * @return {undefined}
+     */
     if (player === 'player1') {
       player1Score += 1;
       document.getElementById('player1Score').innerHTML = player1Score;
@@ -166,8 +169,14 @@ function handleWin(player) {
       document.getElementById('player2Score').innerHTML = player2Score;
     }
   }
-  
+
+
 function returnToMenu() {
+    /**
+     * Returns the user to the welcome area, hiding the game and instructions areas.
+     * Resets the player names using the players form and clears the scoreboard.
+     * @returns {void}
+     */
       welcomeArea.style.display = 'block';
       gameArea.style.display = 'none';
       instructionsArea.style.display = 'none';
@@ -176,8 +185,12 @@ function returnToMenu() {
       scoreBoard.innerHTML = '';
 }
 
+
 function resetGame() {
-    // Reset the player scores
+    /**
+     * Resets the game by clearing the board and setting the scores to zero,
+     * while keeping the player names. Starts a new game after resetting.
+     */
     player1Score = 0;
     player2Score = 0;
     document.getElementById('player1Score').innerHTML = player1Score;
@@ -185,8 +198,13 @@ function resetGame() {
     startGame();
 }
 
-// shows winning message if there is a draw
+
 function isDraw() {
+    /*
+     * Checks if the game has ended in a draw, meaning that all cells on the board
+     * are filled without any winning combinations.
+     * Returns true if the game is a draw, false otherwise.
+     */
     return [...cellElements].every(cell => {
         return cell.classList.contains(X_CLASS) ||
         cell.classList.contains(CIRCLE_CLASS);
@@ -195,17 +213,21 @@ function isDraw() {
 
 
 function placeMark(cell, currentClass) {
-    console.log('Placing mark in cell:', cell);
-    console.log('Current class:', currentClass);
+    /**
+     * Adds the X or O mark to the given cell and updates its inner text with the corresponding mark.
+     * @param {HTMLElement} cell - The HTML element representing the cell that was clicked.
+     * @param {String} currentClass - The current player's class (either 'x' or 'circle').
+     * @returns {void}
+     */
     cell.classList.add(currentClass);
     cell.innerText = currentClass === X_CLASS ? 'X' : 'O';
 }
   
 
 function swapTurns() {
-    /* 
-     * changes turn
-    */
+    /**
+     * Switches the turn between the players and updates the current player names to be displayed.
+     */
     circleTurn = !circleTurn;
     currentPlayer = circleTurn ? player2Name : player1Name;
     displayCurrentPlayer();
@@ -213,9 +235,11 @@ function swapTurns() {
 
 
 function setBoardHoverClass() {
-    /* 
-     * adds the correct hover effect
-    */
+    /**
+     * Adds a hover effect to the cells on the game board based on the current player's turn.
+     * If it's the circle player's turn, the class 'circle' is added to the board element,
+     * and if it's the cross player's turn, the class 'x' is added instead.
+     */
     board.classList.remove(X_CLASS);
     board.classList.remove(CIRCLE_CLASS);
     if (circleTurn) {
@@ -227,9 +251,11 @@ function setBoardHoverClass() {
 
 
 function checkWin(currentClass) {
-    /* 
-     * checks for winning combos
-    */
+    /**
+     * Checks for winning combinations.
+     * @param {string} currentClass - The class of the current player's token.
+     * @returns {boolean} True if there is a winning combination, false otherwise.
+     */
     return WINNING_COMBINATIONS.some(combination => {
         return combination.every(index => {
         return cellElements[index].classList.contains(currentClass);
@@ -238,6 +264,11 @@ function checkWin(currentClass) {
 }
 
 function displayCurrentPlayer() {
+    /**
+     * Displays the current player's name above the game board.
+     * The name is retrieved from the global `currentPlayer` variable.
+     * @returns {void}
+     */
     const currentPlayerElem = document.getElementById("currentPlayer");
     currentPlayerElem.innerHTML = `${currentPlayer}'s turn`;
   }
