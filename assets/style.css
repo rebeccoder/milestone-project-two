@@ -3,216 +3,220 @@
 
 /*selects absolutely everything */
 *, *::after, *::before {
-    box-sizing: border-box;
+    box - sizing: border - box;
 }
 
-:root {
-    --cell-size: 100px;
-/* makes x's and o's 90% of the size of the cell size */
-    --mark-size: calc(var(--cell-size) * .9);
+: root {
+    --cell - size: 100 px;
+    /* makes x's and o's 90% of the size of the cell size */
+    --mark - size: calc(var (--cell - size) * .9);
 }
 body {
-    margin: 0; 
-    background-color: black;
+    margin: 0;
+    background - color: black;
 }
 
 #welcomeArea {
     color: white;
-    background-color: black;
-    text-align: center;
-    top:0px;
-    right:0px;
-    bottom:0px;
-    left:0px;
+    background - color: black;
+    text - align: center;
+    top: 0 px;
+    right: 0 px;
+    bottom: 0 px;
+    left: 0 px;
     position: absolute;
-    font-family: 'Oswald', sans-serif;
-    font-size: large;
-  }
+    font - family: 'Oswald',
+    sans - serif;
+    font - size: large;
+}
 
 .instructions {
     color: white;
-    text-align:center;
-    font-size: larger;
-    font-family: 'Oswald', sans-serif;
+    text - align: center;
+    font - size: larger;
+    font - family: 'Oswald',
+    sans - serif;
 }
 
 .logo {
-    font-size: 4em;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
+    font - size: 4 em;
+    font - family: 'Oswald', sans - serif;
+    text - align: center;
     color: white;
 }
 
-.home-buttons {
-    color: black;
-    background-color: red;
-    border-radius: 12px;
-    font-size: 130%;
-    font-family: 'Oswald', sans-serif;
-    cursor: pointer;
-    margin: 5px;
-    border-color: red;
-}
+.home - buttons {
+        color: black;
+        background - color: red;
+        border - radius: 12 px;
+        font - size: 130 % ;
+        font - family: 'Oswald',
+        sans - serif;
+        cursor: pointer;
+        margin: 5 px;
+        border - color: red;
+    }
 
-.board {
-    display: grid;
-/*justify-content and align-content centers everything on the board inside the board div */
-    justify-content: center;
-    align-content: center; 
-/*justify-items and align-items centers the x's and o's in the center of their cells, not just the cells themself */
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(3, auto);
-}
+    .board {
+        display: grid;
+        /*justify-content and align-content centers everything on the board inside the board div */
+        justify - content: center;
+        align - content: center;
+        /*justify-items and align-items centers the x's and o's in the center of their cells, not just the cells themself */
+        justify - items: center;
+        align - items: center;
+        grid - template - columns: repeat(3, auto);
+    }
 
-.cell {
-    width: var(--cell-size);
-    height: var(--cell-size);
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
+    .cell {
+        width: var (--cell - size);
+        height: var (--cell - size);
+        border: 1 px solid white;
+        display: flex;
+        justify - content: center;
+        align - items: center;
+        position: relative;
+        cursor: pointer;
+    }
 
-.cell:first-child,
-.cell:nth-child(2),
-.cell:nth-child(3) {
-    border-top: none;
-}
+    .cell: first - child,
+    .cell: nth - child(2),
+    .cell: nth - child(3) {
+        border - top: none;
+    }
 
-.cell:nth-child(3n + 1) {
-    border-left: none;
-}
-.cell:nth-child(3n + 3) {
-    border-right: none;
-}
+    .cell: nth - child(3n + 1) {
+        border - left: none;
+    }
+    .cell: nth - child(3n + 3) {
+        border - right: none;
+    }
 
-.cell:last-child,
-.cell:nth-child(8),
-.cell:nth-child(7) {
-    border-bottom: none;
-}
+    .cell: last - child,
+    .cell: nth - child(8),
+    .cell: nth - child(7) {
+        border - bottom: none;
+    }
 
-.cell.x,
-.cell.circle {
-    cursor:not-allowed;
-}
+    .cell.x,
+    .cell.circle {
+        cursor: not - allowed;
+    }
 
-.cell.x::before,
-.cell.x::after,
-.cell.circle::before {
-    background-color:white;
-}
-/* .board.x .cellnot(.x):not(.circle):hover creates a hover effect over all the cells on the x board that are not in use */
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after,
-.board.circle .cell:not(.x):not(.circle):hover::before {
-    background-color: rgb(66, 63, 63);
-}
+    .cell.x::before,
+    .cell.x::after,
+    .cell.circle::before {
+        background - color: white;
+    }
+    /* .board.x .cellnot(.x):not(.circle):hover creates a hover effect over all the cells on the x board that are not in use */
+    .board.x.cell: not(.x): not(.circle): hover::before,
+    .board.x.cell: not(.x): not(.circle): hover::after,
+    .board.circle.cell: not(.x): not(.circle): hover::before {
+        background - color: rgb(66, 63, 63);
+    }
 
-/* This code creates the lines in the X on the X board */
-.cell.x::before,
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::before,
-.board.x .cell:not(.x):not(.circle):hover::after {
-    content: '';
-    position: absolute;
-    width: calc(var(--mark-size) * .15);
-    height: var(--mark-size);
-}
+    /* This code creates the lines in the X on the X board */
+    .cell.x::before,
+    .cell.x::after,
+    .board.x.cell: not(.x): not(.circle): hover::before,
+    .board.x.cell: not(.x): not(.circle): hover::after {
+        content: '';
+        position: absolute;
+        width: calc(var (--mark - size) * .15);
+        height: var (--mark - size);
+    }
 
-/*This rotates the one line of the X */
-.cell.x::before,
-.board.x .cell:not(.x):not(.circle):hover::before {
-    transform: rotate(45deg);
-}
+    /*This rotates the one line of the X */
+    .cell.x::before,
+    .board.x.cell: not(.x): not(.circle): hover::before {
+        transform: rotate(45 deg);
+    }
 
-/*This rotates the other line of the X*/
-.cell.x::after,
-.board.x .cell:not(.x):not(.circle):hover::after {
-    transform: rotate(-45deg);
-}
+    /*This rotates the other line of the X*/
+    .cell.x::after,
+    .board.x.cell: not(.x): not(.circle): hover::after {
+        transform: rotate(-45 deg);
+    }
 
-/* .board.circle .cell:not(.x):not(.circle):hover creates a hover effect over all the cells on the circle board that are not in use */
+    /* .board.circle .cell:not(.x):not(.circle):hover creates a hover effect over all the cells on the circle board that are not in use */
 
-/*This creates a circle in the O cells */
-.cell.circle::before,
-.cell.circle::after,
-.board.circle .cell:not(.x):not(.circle):hover::before,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-    content: '';
-    position: absolute;
-    border-radius:50%;
-}
+    /*This creates a circle in the O cells */
+    .cell.circle::before,
+    .cell.circle::after,
+    .board.circle.cell: not(.x): not(.circle): hover::before,
+    .board.circle.cell: not(.x): not(.circle): hover::after {
+        content: '';
+        position: absolute;
+        border - radius: 50 % ;
+    }
 
-/* The visible part of the cirle*/
-.cell.circle::before,
-.board.circle .cell:not(.x):not(.circle):hover::before
- {
-    width: var(--mark-size);
-    height: var(--mark-size);
-}
+    /* The visible part of the cirle*/
+    .cell.circle::before,
+    .board.circle.cell: not(.x): not(.circle): hover::before {
+        width: var (--mark - size);
+        height: var (--mark - size);
+    }
 
-/* The inside part of the circle */
-.cell.circle:after,
-.board.circle .cell:not(.x):not(.circle):hover::after {
-    width: calc(var(--mark-size) * .7);
-    height: calc(var(--mark-size) * .7);
-    background-color:black;
-}
+    /* The inside part of the circle */
+    .cell.circle: after,
+    .board.circle.cell: not(.x): not(.circle): hover::after {
+        width: calc(var (--mark - size) * .7);
+        height: calc(var (--mark - size) * .7);
+        background - color: black;
+    }
 
 #scoreBoard {
     color: white;
-    background-color: black;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: large;
-    text-transform: capitalize;
-    width: 300px;
-    border: 15px solid black;
-    padding: 50px;
+    background - color: black;
+    text - align: center;
+    font - family: 'Oswald',
+    sans - serif;
+    font - size: large;
+    text - transform: capitalize;
+    width: 300 px;
+    border: 15 px solid black;
+    padding: 50 px;
     margin: auto;;
 }
 
-.button-area {
-    float: right;
-}
+.button - area {
+        float: right;
+    }
 
-.game-buttons {
-    color: white;
-    background-color: black;
-    border-radius: 12px;
-    font-size: 110%;
-    font-family: 'Oswald', sans-serif;
-    cursor: pointer;
-    margin: 5px;
-    border-color: white;
-}
+    .game - buttons {
+        color: white;
+        background - color: black;
+        border - radius: 12 px;
+        font - size: 110 % ;
+        font - family: 'Oswald',
+        sans - serif;
+        cursor: pointer;
+        margin: 5 px;
+        border - color: white;
+    }
 
 
-.swal2-title {
-    font-size: 24px;
-    color: black !important;
-    font-family: 'Oswald';
-    text-transform: capitalize !important;
-}
+    .swal2 - title {
+        font - size: 24 px;
+        color: black!important;
+        font - family: 'Oswald';
+        text - transform: capitalize!important;
+    }
 
-.swal2-success-ring {
-    border: black !important;
-}
+    .swal2 - success - ring {
+        border: black!important;
+    }
 
-.swal2-confirm, 
-.swal2-deny {
-    background-color: black !important;
-}
+    .swal2 - confirm,
+    .swal2 - deny {
+        background - color: black!important;
+    }
 
 #currentPlayer {
-    text-align: center;
-    text-transform: capitalize;
+    text - align: center;
+    text - transform: capitalize;
     color: red;
-    font-family: 'Oswald', sans-serif;
-    font-size: x-large;
-    padding: 30px;
+    font - family: 'Oswald', sans - serif;
+    font - size: x - large;
+    padding: 30 px;
 }

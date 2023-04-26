@@ -1,5 +1,5 @@
 const X_CLASS = 'x';
-const CIRCLE_CLASS = 'circle'; 
+const CIRCLE_CLASS = 'circle';
 const WINNING_COMBINATIONS = [
     [0, 1, 2],
     [3, 4, 5],
@@ -30,21 +30,21 @@ restartButton.addEventListener('click', resetGame);
 
 function startGame(event) {
     /**
-    * Get players' names from the form and assign player 1 with X class and player 2 with Circle class. 
-    * Hide the welcome and instruction area, set up the board and scoreboard with X to start the game.
-    * @param event: A DOM event object
-    * @return: None
-    */
+     * Get players' names from the form and assign player 1 with X class and player 2 with Circle class. 
+     * Hide the welcome and instruction area, set up the board and scoreboard with X to start the game.
+     * @param event: A DOM event object
+     * @return: None
+     */
 
     player1Name = document.getElementById('player1Name').value;
     player2Name = document.getElementById('player2Name').value;
-    
+
     circleTurn = false;
     currentPlayer = player1Name;
 
     if (event !== null && event !== undefined) {
         event.preventDefault();
-      }
+    }
     document.getElementById("gameArea").removeAttribute("hidden");
 
     const cells = document.querySelectorAll('#board [data-cell]');
@@ -53,7 +53,7 @@ function startGame(event) {
         cell.classList.remove('circle');
         cell.removeAttribute('data-marked-by');
         cell.textContent = '';
-      });
+    });
 
     board.classList.add(X_CLASS);
     board.classList.remove(CIRCLE_CLASS);
@@ -61,7 +61,7 @@ function startGame(event) {
     welcomeArea.style.display = 'none';
     instructionsArea.style.display = 'none';
     gameArea.style.display = 'block';
-    
+
     currentPlayer = player1Name;
     displayCurrentPlayer();
 
@@ -77,7 +77,9 @@ function startGame(event) {
           </div>
         `;
     cellElements.forEach(cell => {
-        cell.addEventListener('click', handleClick, { once: true });
+        cell.addEventListener('click', handleClick, {
+            once: true
+        });
         console.log('Event listener added to cell:', cell);
     });
     displayCurrentPlayer();
@@ -88,7 +90,7 @@ function instructionsPage() {
     /**
      * Displays the instructions page and hides the welcome and game pages.
      * @return: None
-    */
+     */
     document.getElementById("instructions").removeAttribute("hidden");
     welcomeArea.style.display = 'none';
     gameArea.style.display = 'none';
@@ -105,12 +107,12 @@ function handleClick(e) {
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
     placeMark(cell, currentClass);
     if (checkWin(currentClass)) {
-      endGame(false);
+        endGame(false);
     } else if (isDraw()) {
-      endGame(true);
+        endGame(true);
     } else {
-      swapTurns();
-      setBoardHoverClass();
+        swapTurns();
+        setBoardHoverClass();
     }
 }
 
@@ -121,8 +123,8 @@ function endGame(draw) {
      * @param {boolean} draw - Indicates if the game ended in a draw.
      * @return {void} 
      */
-   let winningMessage = "";
-   let icon = "";
+    let winningMessage = "";
+    let icon = "";
 
     if (draw) {
         winningMessage = 'Draw!';
@@ -151,8 +153,8 @@ function endGame(draw) {
         document.getElementById('player1Score').innerHTML = player1Score;
         document.getElementById('player2Score').innerHTML = player2Score;
     })
-    
-} 
+
+}
 
 
 function handleWin(player) {
@@ -162,13 +164,13 @@ function handleWin(player) {
      * @return {undefined}
      */
     if (player === 'player1') {
-      player1Score += 1;
-      document.getElementById('player1Score').innerHTML = player1Score;
+        player1Score += 1;
+        document.getElementById('player1Score').innerHTML = player1Score;
     } else if (player === 'player2') {
-      player2Score += 1;
-      document.getElementById('player2Score').innerHTML = player2Score;
+        player2Score += 1;
+        document.getElementById('player2Score').innerHTML = player2Score;
     }
-  }
+}
 
 
 function returnToMenu() {
@@ -177,12 +179,12 @@ function returnToMenu() {
      * Resets the player names using the players form and clears the scoreboard.
      * @returns {void}
      */
-      welcomeArea.style.display = 'block';
-      gameArea.style.display = 'none';
-      instructionsArea.style.display = 'none';
-      playersForm.reset();
-      const scoreBoard = document.getElementById('scoreBoard');
-      scoreBoard.innerHTML = '';
+    welcomeArea.style.display = 'block';
+    gameArea.style.display = 'none';
+    instructionsArea.style.display = 'none';
+    playersForm.reset();
+    const scoreBoard = document.getElementById('scoreBoard');
+    scoreBoard.innerHTML = '';
 }
 
 
@@ -207,7 +209,7 @@ function isDraw() {
      */
     return [...cellElements].every(cell => {
         return cell.classList.contains(X_CLASS) ||
-        cell.classList.contains(CIRCLE_CLASS);
+            cell.classList.contains(CIRCLE_CLASS);
     });
 }
 
@@ -222,7 +224,7 @@ function placeMark(cell, currentClass) {
     cell.classList.add(currentClass);
     cell.innerText = currentClass === X_CLASS ? 'X' : 'O';
 }
-  
+
 
 function swapTurns() {
     /**
@@ -258,8 +260,8 @@ function checkWin(currentClass) {
      */
     return WINNING_COMBINATIONS.some(combination => {
         return combination.every(index => {
-        return cellElements[index].classList.contains(currentClass);
-         });
+            return cellElements[index].classList.contains(currentClass);
+        });
     });
 }
 
@@ -271,4 +273,4 @@ function displayCurrentPlayer() {
      */
     const currentPlayerElem = document.getElementById("currentPlayer");
     currentPlayerElem.innerHTML = `${currentPlayer}'s turn`;
-  }
+}
