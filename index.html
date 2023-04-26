@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play the traditional Tic Tac Toe game for free online on your computer or on your phone!" />
-    <meta name="keywords" content="tic tac toe, naughts and crosses, x's and o's, games, boardgames, educational games" />
+    <meta name="description" content="Play the traditional Tic Tac Toe game for free online on your computer or on your phone!">
+    <meta name="keywords" content="tic tac toe, naughts and crosses, x's and o's, games, boardgames, educational games">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Tic Tac Toe</title>
   </head>
+
   <body>
+
     <div id="welcomeArea">
       <h1 class="logo">Tic <br>Tac <br>Toe <br>
       </h1>
@@ -33,10 +35,11 @@
       </form>
       <button class="home-buttons" onclick="instructionsPage()">Read Instructions</button>
     </div>
+
     <div id="gameArea" hidden>
       <h1 class="logo"> Tic <br>Tac <br>Toe </h1>
       <!-- tic tac toe board -->
-      <h2 id="currentPlayer"></h2>
+      <h2 id="currentPlayer">Player's Turn</h2>
       <div class="board x" id="board">
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
@@ -48,15 +51,18 @@
         <div class="cell" data-cell></div>
         <div class="cell" data-cell></div>
       </div>
+
       <div id="scoreBoard">
         <p id="player1Score">Player 1:</p>
         <p id="player2Score">Player 2:</p>
       </div>
+
       <div class="button-area">
         <button class="game-buttons" id="resetButton" onclick="startGame()">Reset Game</button>
         <button class="game-buttons" onclick="returnToMenu()">Return to Main Menu</button>
       </div>
     </div>
+
     <div class="instructions" id="instructions" hidden>
       <h1 class="logo">Tic <br>Tac <br>Toe <br>
       </h1>
@@ -68,6 +74,7 @@
       <p style="color: red;"> May the best player win!</p>
       <button class="game-buttons" onclick="returnToMenu()">Return to Main Menu</button>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
   </body>

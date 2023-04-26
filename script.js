@@ -13,7 +13,8 @@ const WINNING_COMBINATIONS = [
 const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.getElementById('board');
 const welcomeArea = document.getElementById('welcomeArea');
-const instructionsArea = document.getElementById('instructions')
+const gameArea = document.getElementById('gameArea');
+const instructionsArea = document.getElementById('instructions');
 let circleTurn;
 let player1Name;
 let player2Name;
@@ -86,17 +87,6 @@ function startGame(event) {
 }
 
 
-function instructionsPage() {
-    /**
-     * Displays the instructions page and hides the welcome and game pages.
-     * @return: None
-     */
-    document.getElementById("instructions").removeAttribute("hidden");
-    welcomeArea.style.display = 'none';
-    gameArea.style.display = 'none';
-    instructionsArea.style.display = 'block';
-}
-
 function handleClick(e) {
     /**
      * Handles the click event when the player clicks on a cell.
@@ -114,6 +104,18 @@ function handleClick(e) {
         swapTurns();
         setBoardHoverClass();
     }
+}
+
+
+function instructionsPage() {
+    /**
+     * Displays the instructions page and hides the welcome and game pages.
+     * @return: None
+     */
+    document.getElementById("instructions").removeAttribute("hidden");
+    welcomeArea.style.display = 'none';
+    gameArea.style.display = 'none';
+    instructionsArea.style.display = 'block';
 }
 
 
@@ -152,7 +154,7 @@ function endGame(draw) {
         }
         document.getElementById('player1Score').innerHTML = player1Score;
         document.getElementById('player2Score').innerHTML = player2Score;
-    })
+    });
 
 }
 
