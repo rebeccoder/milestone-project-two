@@ -30,11 +30,8 @@ LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
 8. [Credits](#credits)
 
 
-## Design
 
-The design was simple, I didn't need to use any external pictures. The whole web page was styled with CSS. The design was to keep it as simple yet effective as possible. the colour theme is black white and re
-
-## User Experience (UX)
+## UX (User Experience)
 
 ### Visitor Goals
 
@@ -42,9 +39,43 @@ The main target audience for the website are as follows:
 
 - Groups of two to compete against eachother, couples or friends.
 - The apps appearance is more suited for adults.
+- Is suitable for total beginners as there is a instructions page.
+
+The main visitor goals are as follows:
+
+- Create an easy to use game for two people to play together online
+- Allow the users to enter their names for a personalised expereience
+- Have an instructions page for people who may have never played before
+- To update the scoreboard so that users can keep track of their scores
 
 
-The main user goals are:
+### User Stories
+
+- As a User I want to know the rules of the game
+- As a User I want to be able to play against my componant 
+- As a User I want to know who's turn it is 
+- As a User I want to keep track of my score
+- As a User I want to be notified when someone wins the game
+- As a User I want to be able to reset the game without having to re-enter our names
+
+## Design Choices
+
+### Colours
+
+The colour choices for the website were kept simple. Black and white with a bit of red for a statement colour. The hover effect was a dark grey colour for visibility. 
+
+![Color Chart](/assets/images/color-chart.png)
+
+### Fonts
+
+After playing around with a few fonts I decided to go with Oswald from Google fonts which is a sans-serif font. 
+It is bold and thick yet very simplistic. The font really brought out the style I was going for.
+
+### Styling
+
+The styling for the game board was influenced from a youtube tutorial which I have credited below. 
+The winning message was also a Sweet Alert message but I changed the buttons to black to match the monochrome style of the board.
+All other styling in the wesbite is original CSS.
 
 
 ## Wireframes
@@ -55,12 +86,13 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Features
 
-
-
 ## Technologies Used
 
  [HTML Formatter:](https://webformatter.com/html)
     -  HTML Formatter was used to beautify the code.
+
+ [Sweet Alerts:](https://sweetalert2.github.io/#download)
+    -  I used sweet alerts for my winning message
 
 
 ### Languages Used
@@ -72,41 +104,22 @@ The website was designed on a wireframe software called Balsamiq.
 ### Frameworks and Programs Used
 
 - [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+    - Git was used for version control by utilizing the Gitpod and Code Anywhere terminal to commit to Git and Push to GitHub.
 -  [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
 -  [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
 
 
-
 ## Testing      
-
-### Testing User Stories from UX Section
-
-` 1. As a user, I want to easily understand the main purpose of the app so that I can be sure it's what I was looking for.`
-- Upon landing on the application the user will see that the title is Tic Tac Toe in the tabs, the grid is then obvious in the centre of the page and when hover over the grid they will see naughts and crosses.
-
-`2.  As a user who is an adult and not necessarily very techy, I want to be able to navigate the game easily and intuitively, so that the game is fun and easy and not overcomplicated.`
-- The game is very simply done. The hover elements allows the user to see who's turn it is, the 'not allowed' cursor over the cells that are already filled shows that they are not able to use those cells. Once someone has won the winning message screen appears showing that there is nothing more that can be done in the game unless they press the restart game which will refresh the game for them. 
-
-`3. As a user who is using the app on my lunch break, I want the design to be simple, so that it's a calm game that's not overstimulating.`
-- The design of the game is very simple, it is black and white with nothing too fancy or colourful or distracting. I wanted to keep it very simple and very neutral so that it's not overstimulating, just relaxing.
 
 ### Validating Code
 
-I ran the HTML code through the [W3C validator](https://validator.w3.org/) and had no errors.
+I ran the HTML code through the [W3C validator](https://validator.w3.org/) without any issues.
 
-And the CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors.
+The CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) without any issues.
 
-The Javascript code ran through the [Jshint validator](https://jshint.com/) without any major issues although there was 59 warnings.
-
-The only errors coming back were that I missed a lot of semi-colons on the following lines of code:
-
-12, 13, 23, 24, 25, 26, 27, 28, 29, 31, 33, 37, 40, 41, 42, 43, 44, 45, 46, 50, 52, 53, 55, 57, 59, 60, 68, 70, 72, 79, 80, 84, 86, 87, 93, 98, 99, 101, 103, 111, 112, 113.
-
-So I added semi-colons to all these lines detected.
-The other error that came up was "'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)." which to my understanding is just an issue with the version of Jshint I was using not a bug in the code itself.
+The Javascript code ran through the [Jshint validator](https://jshint.com/) with one error because the instructionsPage() is not called in the JS file, but it is being called in the HTML itself.
 
 ### Known Bugs
 As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
