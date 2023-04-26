@@ -86,6 +86,10 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Features
 
+
+## Future Goals
+
+
 ## Technologies Used
 
  [HTML Formatter:](https://webformatter.com/html)
@@ -113,6 +117,24 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Testing      
 
+### Responsivity
+
+- The website has been tried and true as a responsive website on the following devices:
+* iPhone SE
+* iPhone XR
+* iPhoe 12 Pro
+* Pixel 5
+* Samsung Galaxy S20 Ultra
+* iPad Air
+* iPad Mini
+* iPhone 6/7/8
+* Surface Pro 7
+* Surface Duo
+* Samsung A51/71
+* Nest Hub
+* Nest Hub Max 
+* All possible tested monitor sizes
+
 ### Validating Code
 
 I ran the HTML code through the [W3C validator](https://validator.w3.org/) without any issues.
@@ -120,6 +142,34 @@ I ran the HTML code through the [W3C validator](https://validator.w3.org/) witho
 The CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) without any issues.
 
 The Javascript code ran through the [Jshint validator](https://jshint.com/) with one error because the instructionsPage() is not called in the JS file, but it is being called in the HTML itself.
+
+
+## UI 
+
+
+### Welcome Area
+- Logo displays correctly on all devices
+- Player 1 and 2 name are required to play the game
+- Buttons navigate through pages as expected
+
+### Instructions Area
+- Logo displays corrently on all decives
+- Instructions are displayed clearly for user to read
+- Gives option to return to main menu but not to start game as player names need to be entered
+
+### Game Area
+- Player's name displays above to board and switches each turn
+- Hover effect when cursor is over empty cells
+- Blocked cursor displays when hovering over cells that are already full
+- Place mark of X or O when the user clicks on the cell
+- When player wins there is a winning message
+- Score board is updated at the end of each game
+- Reset button clears the scoreboard and the game board
+- Return to main menu resets the game and player names
+
+
+## Issues and Resolutions
+
 
 ### Known Bugs
 As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
@@ -173,7 +223,7 @@ $ git clone https://github.com/rebeccoder/milestone-project-one
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
-## External Sources of Code
+## Credits
 
 The tic tac toe game was built based on a youtube tutorial:
 
