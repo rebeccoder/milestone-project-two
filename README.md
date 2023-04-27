@@ -83,7 +83,6 @@ All other styling in the wesbite is original CSS.
 The website was designed on a wireframe software called Balsamiq.
 
 
-
 ## Features
 
 ### Player Name Inputs
@@ -98,7 +97,7 @@ The website was designed on a wireframe software called Balsamiq.
 ![Hover Elements](/assets/images/hover-elements.png)
 - blocked cursor
 ### Player's Turn Displayed
-![Player 1 Turn](/assets/images/player1-turn.png)
+![Player 1 Turn](/assets/images/player1-turn.png)   
 ![Player 2 Turn](/assets/images/player2-turn.png)
 ### Winning Message 
 ![Wining Message](/assets/images/winning-message.png)
@@ -198,6 +197,12 @@ The Javascript code ran through the [Jshint validator](https://jshint.com/) with
 
 ## Issues and Resolutions
 
+* Problem: X's and O's not able to have aria-labels
+* Cause: The X's and O's are made of psuedo elements instead of actual text so,
+  this causes issues with screen readers as they don't exist within the HTML document, so they are basically completely invisible.
+* Resolution: Added a role of "text" to the cell divs and then added an arialabel through Javascript. This was tested on the console  
+  and seemed to work so hopefully it works for screen readers
+---
 * Problem: Player1 name displaying on the actual board when cell is clicked.
 * Cause: The cells inner html was set to display player1 and X class.
 * Resolution: removed the mistakes in the code so the cells inner html just displays X.
