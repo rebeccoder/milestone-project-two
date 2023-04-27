@@ -169,7 +169,27 @@ The Javascript code ran through the [Jshint validator](https://jshint.com/) with
 
 
 ## Issues and Resolutions
-
+---
+* Problem: Player1 name displaying on the actual board when cell is clicked.
+* Cause: The cells inner html was set to display player1 and X class.
+* Resolution: removed the mistakes in the code so the cells inner html just displays X.
+---
+* Problem: Scoreboard and Reset button displaying in welcomeArea but not the gameArea,
+  but after pressing the return to menu button, then starting the game again, the gameArea only displays the scoreboard and reset button but nothing else.
+* Cause: There was an extra `</div>` tag right before the scoreboard div, which was causing the scoreboard and restart button to be    
+  outside of the gameArea div. Also the gameArea div is not being cleared properly when the user returns to the main menu.
+* Resolution: Removed the unnecessary closing div tag and modified the returnToMenu function to hide the gameArea.
+---
+* Problem: After Circle wins, the following game would have a X hover class but when the mark was placed it was circles turn
+* Cause: Although circle_turn was set to false it was at the end of the startGame function and was getting overrided when circle won
+  the game
+* Resolution: Removed the line circleTurn = false; from the end of the function, and added it at the end of the function's main block, 
+  just before the displayCurrentPlayer() function is called. This ensures that X will always start the game.
+---
+* Problem: When entering both names into the player name inputs and then pressing the "read instructions" button, the whole html       
+  document showed when only the instructionsArea was meant to display. This only happens when both names were entered, if nothing was enetered or if only one name was entered this didn't happen.
+* Cause: The "read instructions" button was inside the form element and itw was recognising it as a submit button even though it wasn't
+* Resolution: Moved the button out of the form element and it worked as expected.
 
 ### Known Bugs
 As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
@@ -222,6 +242,32 @@ $ git clone https://github.com/rebeccoder/milestone-project-one
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
+
+### Installation of Sweet Alerts
+
+To use SweetAlert2 you need to include the SweetAlert2 CSS and JavaScript files in your HTML file.
+
+You can either download the files directly from the SweetAlert2 GitHub page, or you can install it using npm.
+
+To install SweetAlert2 using npm, follow these steps:
+
+Open your terminal and navigate to your project's directory.
+
+Run the following command to install SweetAlert2:
+
+```
+npm install sweetalert2
+```
+
+Once the installation is complete, include the SweetAlert2 CSS and JavaScript files in your HTML file by adding the following lines inside the <head> tag:
+
+```
+<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+```
+```
+<script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+```
+That's it! You can now use SweetAlert2 in your JavaScript code.
 
 ## Credits
 
