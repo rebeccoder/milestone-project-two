@@ -86,6 +86,30 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Features
 
+### Player Name Inputs
+![Name Inputs](/assets/images/name-inputs.png)
+### Home Page Buttons
+![Homepage Buttons](/assets/images/homepage-buttons.png)
+### Instructions Page
+![Instructions Page](/assets/images/instructions-page.png)
+### Tic Tac Toe Board
+![Game Board](/assets/images/game-board.png)
+### Hover Elements
+![Hover Elements](/assets/images/hover-elements.png)
+- blocked cursor
+### Player's Turn Displayed
+![Player 1 Turn](/assets/images/player1-turn.png)
+![Player 2 Turn](/assets/images/player2-turn.png)
+### Winning Message 
+![Wining Message](/assets/images/winning-message.png)
+### Draw
+![Draw](/assets/images/draw-message.png)
+### Scoreboard
+![ScoreBoard](/assets/images/scoreboard.png)
+### Game Area Buttons
+![Game Area Buttons](/assets/images/scoreboard.png)
+
+
 
 ## Future Goals
 
@@ -173,7 +197,7 @@ The Javascript code ran through the [Jshint validator](https://jshint.com/) with
 
 
 ## Issues and Resolutions
----
+
 * Problem: Player1 name displaying on the actual board when cell is clicked.
 * Cause: The cells inner html was set to display player1 and X class.
 * Resolution: removed the mistakes in the code so the cells inner html just displays X.
