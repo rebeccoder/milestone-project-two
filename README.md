@@ -89,7 +89,11 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Future Goals
 
+- To allow users to make accounts and play in tournaments online with their friends and with strangers
+- To display a high score scoreboard
+- To keep track of users wins and losses, who they played and a breakdown of how they won/loss
 
+- 
 ## Technologies Used
 
  [HTML Formatter:](https://webformatter.com/html)
