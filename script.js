@@ -29,15 +29,12 @@ playersForm.addEventListener('submit', startGame);
 const restartButton = document.getElementById('resetButton');
 restartButton.addEventListener('click', resetGame);
 
-
+/**
+ * Get players' names from the form and assigns players to the relevant classes.
+ * Hides the welcome and instruction area, begins the game
+ * @param {Event} - A DOM event object
+*/
 function startGame(event) {
-    /**
-     * Get players' names from the form and assign player 1 with X class and player 2 with Circle class. 
-     * Hide the welcome and instruction area, set up the board and scoreboard with X to start the game.
-     * @param event: A DOM event object
-     * @return: None
-     */
-
     player1Name = document.getElementById('player1Name').value;
     player2Name = document.getElementById('player2Name').value;
 
@@ -56,23 +53,25 @@ function startGame(event) {
     instructionsArea.style.display = 'none';
     gameArea.style.display = 'block';
 
-    currentPlayer = player1Name;
     displayCurrentPlayer();
 
     setupGrid();
 
-    scoreBoard.innerHTML = `
-        <div>
-            <h2>${player1Name}'s Score:</h2>
-            <span id="player1Score">${player1Score}</span>
-          </div>
-          <div>
-            <h2>${player2Name}'s Score:</h2>
-            <span id="player2Score">${player2Score}</span>
-          </div>
-        `;
-}
+    setupScoreboard()
 
+}
+function setupScoreboard() {
+    scoreBoard.innerHTML = `
+    <div>
+        <h2>${player1Name}'s Score:</h2>
+        <span id="player1Score">${player1Score}</span>
+      </div>
+      <div>
+        <h2>${player2Name}'s Score:</h2>
+        <span id="player2Score">${player2Score}</span>
+      </div>
+    `;
+}
 function setupGrid() {
     cellElements.forEach(cell => {
         cell.classList.remove('x');
