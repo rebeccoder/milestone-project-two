@@ -146,23 +146,51 @@ The website was designed on a wireframe software called Balsamiq.
 
 ### Responsivity
 
-- The website has been tried and true as a responsive website on the following devices:
-* iPhone SE
-* iPhone XR
-* iPhoe 12 Pro
-* Pixel 5
-* Samsung Galaxy S20 Ultra
-* iPad Air
-* iPad Mini
-* iPhone 6/7/8
-* Surface Pro 7
-* Surface Duo
-* Samsung A51/71
-* Nest Hub
-* Nest Hub Max 
-* All possible tested monitor sizes
+**Google DevTools:**  
+   
+To test the responsiveness of the game on different devices, I used Google DevTools, which is built into the Chrome browser.
+By using Google DevTools, you can easily test the game's responsiveness on various devices without needing to own those devices physically. This helps to ensure that the game looks and functions correctly on all devices, providing a better user experience for all players. The devices available to test on DevTools are as follows:
+- Pixel 2
+- Pixel 2 XL
+- Pixel 3
+- Pixel 3 XL
+- Pixel 4
+- Pixel 4 XL
+- iPhone 5/SE
+- iPhone 6/7/8
+- iPhone 6/7/8 Plus
+- iPhone X
+- iPad
+- iPad Pro
+- Surface Duo
+- Galaxy Fold
+- Galaxy Note 3
+- Galaxy Note 9
+- Galaxy S5
+- Galaxy S9/S9+
+- Nexus 5X
+- Nexus 6P
 
-### Validating Code
+**Desktop:**  
+  
+The game was tested on various desktop browsers, including Chrome, Firefox, and Safari, at different resolutions and with browser tools to emulate different screen sizes.
+  
+For example, during testing on a desktop device, the game was viewed on a 1920x1080 resolution screen as well as on a smaller 1366x768 resolution screen. The game was also viewed on both Chrome and Firefox browsers to ensure cross-browser compatibility. Additionally, the browser's built-in tools were used to emulate smaller screen sizes to test the responsiveness of the game.
+
+**Mobile:**  
+  
+The game was tested on various mobile devices, including iPhones and Androids, with different screen sizes and resolutions.  
+  
+For example, during testing on a mobile device, the game was viewed on an iPhone X and an iPhone 8, both with different screen sizes and resolutions. The game was also viewed on an Android device with a smaller screen size and lower resolution. The game was tested both in portrait and landscape mode to ensure that it is displayed correctly in both orientations.
+  
+   
+**If you experience any responsivtiy issues**:
+- Clear your browser cache and reload the page
+- Make sure that you have a stable internet connection
+- Check if your browser is up to date
+- If the issue persists, try accessing the website on a different device or browser.
+
+## Validating Code
 
 I ran the HTML code through the [W3C validator](https://validator.w3.org/) without any issues.
 
@@ -170,6 +198,9 @@ The CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-valida
 
 The Javascript code ran through the [Jshint validator](https://jshint.com/) with one error because the instructionsPage() is not called in the JS file, but it is being called in the HTML itself.
 
+To ensure the project is performing optimally, a [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) report was conducted with the following scores:
+![lighthouse scores](/assets/images/lighthouse.png)
+These scores indicate that the project has a high level of accessibility and meets best practices and SEO standards. The perfomance score has been brought down by my computers antivirus software, so the score is not an indicator for the need to improve anything.
 
 ## UI 
 
