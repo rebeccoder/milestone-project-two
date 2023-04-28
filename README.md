@@ -80,8 +80,16 @@ All other styling in the wesbite is original CSS.
 
 ## Wireframes
 
-The website was designed on a wireframe software called Balsamiq.
-
+The website was designed on a wireframe software called Balsamiq.  
+  
+### **Homepage Wireframe:**
+![Homepage Wireframe](/assets/images/homepage-wireframe.png)
+### **Instruction Page Wireframe:**
+![Instructions Wireframe](/assets/images/instructions-wireframe.png)
+### **Game Area Wireframe:**
+![Game Area Wireframe](/assets/images/gamearea-wireframe.png)
+### **Mobile Wireframe:**
+![Mobile Wireframe](/assets/images/mobile-wireframe.png)
 
 ## Features
 
