@@ -49,14 +49,6 @@ function startGame(event) {
     }
     document.getElementById("gameArea").removeAttribute("hidden");
 
-    const cells = document.querySelectorAll('#board [data-cell]');
-    cells.forEach(cell => {
-        cell.classList.remove('x');
-        cell.classList.remove('circle');
-        cell.removeAttribute('data-marked-by');
-        cell.textContent = '';
-    });
-
     board.classList.add(X_CLASS);
     board.classList.remove(CIRCLE_CLASS);
 
@@ -67,27 +59,34 @@ function startGame(event) {
     currentPlayer = player1Name;
     displayCurrentPlayer();
 
-    const scoreBoard = document.getElementById('scoreBoard');
+    setupGrid();
+
     scoreBoard.innerHTML = `
         <div>
             <h2>${player1Name}'s Score:</h2>
-            <span id="player1Score">0</span>
+            <span id="player1Score">${player1Score}</span>
           </div>
           <div>
             <h2>${player2Name}'s Score:</h2>
-            <span id="player2Score">0</span>
+            <span id="player2Score">${player2Score}</span>
           </div>
         `;
+}
+
+function setupGrid() {
+    cellElements.forEach(cell => {
+        cell.classList.remove('x');
+        cell.classList.remove('circle');
+        cell.removeAttribute('data-marked-by');
+        cell.textContent = '';
+    });
+
     cellElements.forEach(cell => {
         cell.addEventListener('click', handleClick, {
             once: true
         });
-        console.log('Event listener added to cell:', cell);
     });
-    displayCurrentPlayer();
 }
-
-
 function handleClick(e) {
     /**
      * Handles the click event when the player clicks on a cell.
