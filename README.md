@@ -85,38 +85,91 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Features
 
-### Player Name Inputs
+### **Player Name Inputs**
+
 ![Name Inputs](/assets/images/name-inputs.png)
-### Home Page Buttons
+
+
+- The game allows the user to input their name before starting a new game. This feature adds a personal touch to the game, making the user experience more engaging. Additionally, it provides a way to track and compare scores between players. Once the user inputs their name, it is displayed at the top of the game area, as well as on the scoreboard and the winning message giving them a sense of ownership over their game.
+
+---
+ 
+### **Home Page Buttons**
+
 ![Homepage Buttons](/assets/images/homepage-buttons.png)
+  
+- The home page of this website features two buttons that allow the user to navigate to different parts of the website. The "Start Game" button takes the user to the game area, where they can start playing the game. The "Instructions" button takes the user to a separate page that provides instructions on how to play the game. These buttons provide a simple and intuitive way for users to interact with the website and access the different features of the game.  
+
+---
+
 ### Instructions Page
+  
 ![Instructions Page](/assets/images/instructions-page.png)
+  
+- The "Instructions" page is a feature of the game that provides the user with the rules and objectives of the game. This page is accessible from the home page through a button labeled "Instructions". The page displays a simple set of instructions on how to play the game, along with a button that returns the user to the home page. The use of this page makes the game more user-friendly and helps to ensure that all players understand the rules before starting the game. It also has a button that returns the user back to the home page to enter the player names and start the game.
+
+---  
+
 ### Tic Tac Toe Board
-![Game Board](/assets/images/game-board.png)
-### Hover Elements
-![Hover Elements](/assets/images/hover-elements.png)
-- blocked cursor
+ 
+![Game Board](/assets/images/game-board.png)  
+  
+- The Tic Tac Toe board is the central feature of the game, where players can place their X and O markers to compete against each other. It is designed with a responsive layout, making it easy to play on different screen sizes. The board is fully functional, preventing players from placing a marker on a square that has already been taken and determining the winner once the game is over. Additionally, the board is styled with a simple and modern design, enhancing the overall user experience of the game.
+
+ ---
+
+### Hover Elements  
+  
+![Hover Elements](/assets/images/hover-elements.png)  
+  
+- The board in the game includes a hover effect on each cell that displays a grey X or an O when the relevant player hover their mouse over an empty cell. If the cell is in use then the cursor changes to a blocked sign to show the user that they can not enter anything into this cell. This feature improves the user experience and provides visual feedback to the user when they interact with the game board. 
+
+--- 
 ### Player's Turn Displayed
+ 
 ![Player 1 Turn](/assets/images/player1-turn.png)   
 ![Player 2 Turn](/assets/images/player2-turn.png)
-### Winning Message 
-![Wining Message](/assets/images/winning-message.png)
-### Draw
-![Draw](/assets/images/draw-message.png)
-### Scoreboard
-![ScoreBoard](/assets/images/scoreboard.png)
-### Game Area Buttons
-![Game Area Buttons](/assets/images/scoreboard.png)
 
+- In this project, a feature was added to display the current player's turn above the Tic Tac Toe board. This feature helps the players keep track of whose turn it is and adds clarity to the game. 
 
+--- 
+### Winning Message  
+  
+![Wining Message](/assets/images/winning-message.png)  
+  
+- The winning message in this game was made using sweet alerts. A message box pops up in the center of the screen saying the "player1/player2 wins!" using the actual name that was entered by the user. It also gives the option to play again or return to the main menu. This feature makes it easy for players to determine the winner of the game and adds a fun element to the gameplay.
 
+---
+### Draw  
+  
+![Draw](/assets/images/draw-message.png)  
+  
+- The winning message also works in the same way if there's a draw.
+
+---
+
+### Scoreboard  
+  
+![ScoreBoard](/assets/images/scoreboard.png)  
+  
+- The game includes a scoreboard that keeps track of the number of wins for each player. The scoreboard is displayed durectly underneath the tic tac toe board and updates automatically after each game. It displays the player names and the number of games won. This feature provides an engaging and competitive experience for the players, as they can keep track of their progress throughout the game.
+
+---
+
+### Game Area Buttons  
+  
+![Game Area Buttons](/assets/images/scoreboard.png)  
+  
+- The game area contains two buttons that allow users to reset the game or return to the home page. The "Reset Game" button clears the current game board and resets the score to zero, allowing players to start a new game. The "Home" button takes the user back to the home page, where they can choose to start a new game or read the instructions. These buttons provide a simple and intuitive way for users to navigate the game and access important features.
+
+--- 
 ## Future Goals
 
 - To allow users to make accounts and play in tournaments online with their friends and with strangers
 - To display a high score scoreboard
 - To keep track of users wins and losses, who they played and a breakdown of how they won/loss
 
-- 
+ 
 ## Technologies Used
 
  [HTML Formatter:](https://webformatter.com/html)
@@ -130,7 +183,7 @@ The website was designed on a wireframe software called Balsamiq.
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JAVA SCRIPT](https://en.wikipedia.org/wiki/JavaScript)
+-   [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks and Programs Used
 
