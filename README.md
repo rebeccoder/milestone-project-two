@@ -33,7 +33,7 @@ LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
 
 ## UX (User Experience)
 
-### Visitor Goals
+### **Visitor Goals**
 
 The main target audience for the website are as follows:
 
@@ -49,7 +49,7 @@ The main visitor goals are as follows:
 - To update the scoreboard so that users can keep track of their scores
 
 
-### User Stories
+### **User Stories**
 
 - As a User I want to know the rules of the game
 - As a User I want to be able to play against my componant 
@@ -60,18 +60,18 @@ The main visitor goals are as follows:
 
 ## Design Choices
 
-### Colours
+### **Colours**
 
 The colour choices for the website were kept simple. Black and white with a bit of red for a statement colour. The hover effect was a dark grey colour for visibility. 
 
 ![Color Chart](/assets/images/color-chart.png)
 
-### Fonts
+### **Fonts**
 
 After playing around with a few fonts I decided to go with Oswald from Google fonts which is a sans-serif font. 
 It is bold and thick yet very simplistic. The font really brought out the style I was going for.
 
-### Styling
+### **Styling**
 
 The styling for the game board was influenced from a youtube tutorial which I have credited below. 
 The winning message was also a Sweet Alert message but I changed the buttons to black to match the monochrome style of the board.
@@ -102,7 +102,7 @@ The website was designed on a wireframe software called Balsamiq.
 
 ---
 
-### Instructions Page
+### **Instructions Page**
   
 ![Instructions Page](/assets/images/instructions-page.png)
   
@@ -110,7 +110,7 @@ The website was designed on a wireframe software called Balsamiq.
 
 ---  
 
-### Tic Tac Toe Board
+### **Tic Tac Toe Board**
  
 ![Game Board](/assets/images/game-board.png)  
   
@@ -118,14 +118,14 @@ The website was designed on a wireframe software called Balsamiq.
 
  ---
 
-### Hover Elements  
+### **Hover Elements**
   
 ![Hover Elements](/assets/images/hover-elements.png)  
   
 - The board in the game includes a hover effect on each cell that displays a grey X or an O when the relevant player hover their mouse over an empty cell. If the cell is in use then the cursor changes to a blocked sign to show the user that they can not enter anything into this cell. This feature improves the user experience and provides visual feedback to the user when they interact with the game board. 
 
 --- 
-### Player's Turn Displayed
+### **Player's Turn Displayed**
  
 ![Player 1 Turn](/assets/images/player1-turn.png)   
 ![Player 2 Turn](/assets/images/player2-turn.png)
@@ -133,14 +133,14 @@ The website was designed on a wireframe software called Balsamiq.
 - In this project, a feature was added to display the current player's turn above the Tic Tac Toe board. This feature helps the players keep track of whose turn it is and adds clarity to the game. 
 
 --- 
-### Winning Message  
+### **Winning Message**  
   
 ![Wining Message](/assets/images/winning-message.png)  
   
 - The winning message in this game was made using sweet alerts. A message box pops up in the center of the screen saying the "player1/player2 wins!" using the actual name that was entered by the user. It also gives the option to play again or return to the main menu. This feature makes it easy for players to determine the winner of the game and adds a fun element to the gameplay.
 
 ---
-### Draw  
+### **Draw**  
   
 ![Draw](/assets/images/draw-message.png)  
   
@@ -148,7 +148,7 @@ The website was designed on a wireframe software called Balsamiq.
 
 ---
 
-### Scoreboard  
+### **Scoreboard**  
   
 ![ScoreBoard](/assets/images/scoreboard.png)  
   
@@ -156,7 +156,7 @@ The website was designed on a wireframe software called Balsamiq.
 
 ---
 
-### Game Area Buttons  
+### **Game Area Buttons**  
   
 ![Game Area Buttons](/assets/images/scoreboard.png)  
   
@@ -179,13 +179,13 @@ The website was designed on a wireframe software called Balsamiq.
     -  I used sweet alerts for my winning message
 
 
-### Languages Used
+### **Languages Used**
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks and Programs Used
+### **Frameworks and Programs Used**
 
 - [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod and Code Anywhere terminal to commit to Git and Push to GitHub.
@@ -197,7 +197,7 @@ The website was designed on a wireframe software called Balsamiq.
 
 ## Testing      
 
-### Responsivity
+### **Responsivity**
 
 **Google DevTools:**  
    
@@ -258,17 +258,17 @@ These scores indicate that the project has a high level of accessibility and mee
 ## UI 
 
 
-### Welcome Area
+### **Welcome Area**
 - Logo displays correctly on all devices
 - Player 1 and 2 name are required to play the game
 - Buttons navigate through pages as expected
 
-### Instructions Area
+### **Instructions Area**
 - Logo displays corrently on all decives
 - Instructions are displayed clearly for user to read
 - Gives option to return to main menu but not to start game as player names need to be entered
 
-### Game Area
+### **Game Area**
 - Player's name displays above to board and switches each turn
 - Hover effect when cursor is over empty cells
 - Blocked cursor displays when hovering over cells that are already full
@@ -308,12 +308,12 @@ These scores indicate that the project has a high level of accessibility and mee
 * Cause: The "read instructions" button was inside the form element and itw was recognising it as a submit button even though it wasn't
 * Resolution: Moved the button out of the form element and it worked as expected.
 
-### Known Bugs
+### **Known Bugs**
 As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
 
 ## Deployment
 
-### GitHub Pages
+### **GitHub Pages**
 
 The project was deployed to GitHub Pages using the following steps...
 
@@ -325,7 +325,7 @@ The project was deployed to GitHub Pages using the following steps...
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://rebeccoder.github.io/milestone-project-two/index.html) in the "GitHub Pages" section.
 
-### Forking the GitHub Repository
+### **Forking the GitHub Repository**
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
@@ -333,7 +333,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
-### Making a Local Clone
+### **Making a Local Clone**
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. Under the repository name, click "Clone or download".
@@ -360,33 +360,7 @@ $ git clone https://github.com/rebeccoder/milestone-project-one
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
-### Installation of Sweet Alerts
-
-To use SweetAlert2 you need to include the SweetAlert2 CSS and JavaScript files in your HTML file.
-
-You can either download the files directly from the SweetAlert2 GitHub page, or you can install it using npm.
-
-To install SweetAlert2 using npm, follow these steps:
-
-Open your terminal and navigate to your project's directory.
-
-Run the following command to install SweetAlert2:
-
-```
-npm install sweetalert2
-```
-
-Once the installation is complete, include the SweetAlert2 CSS and JavaScript files in your HTML file by adding the following lines inside the <head> tag:
-
-```
-<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
-```
-```
-<script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
-```
-That's it! You can now use SweetAlert2 in your JavaScript code.
-
-## Credits
+## Credits 
 
 The tic tac toe game was built based on a youtube tutorial:
 
