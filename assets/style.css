@@ -220,3 +220,11 @@ body {
 .swal2-deny {
     background-color: black !important;
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Responsivity */
+@media (min-width: 280px) and (max-width: 768px) {
+    /* for mobile devices */
+    .logo {
+    font-size: 3em !important;
+ }
+}
