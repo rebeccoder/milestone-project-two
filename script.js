@@ -15,6 +15,7 @@ const board = document.getElementById('board');
 const welcomeArea = document.getElementById('welcomeArea');
 const gameArea = document.getElementById('gameArea');
 const instructionsArea = document.getElementById('instructions');
+const scoreBoard = document.getElementById('scoreBoard');
 let circleTurn;
 let player1Name;
 let player2Name;
@@ -185,7 +186,6 @@ function returnToMenu() {
     gameArea.style.display = 'none';
     instructionsArea.style.display = 'none';
     playersForm.reset();
-    const scoreBoard = document.getElementById('scoreBoard');
     scoreBoard.innerHTML = '';
 }
 
@@ -199,7 +199,6 @@ function resetGame() {
     player2Score = 0;
     document.getElementById('player1Score').innerHTML = player1Score;
     document.getElementById('player2Score').innerHTML = player2Score;
-    startGame();
 }
 
 
