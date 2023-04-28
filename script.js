@@ -185,7 +185,7 @@ function returnToMenu() {
     gameArea.style.display = 'none';
     instructionsArea.style.display = 'none';
     playersForm.reset();
-    scoreBoard.innerHTML = '';
+    resetGame();
 }
 
 
