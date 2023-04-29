@@ -169,7 +169,7 @@ Sweet Alerts. A message box pops up in the center of the screen saying the "play
 
 ### **Game Area Buttons**  
   
-![Game Area Buttons](/assets/images/scoreboard.png)  
+![Game Area Buttons](/assets/images/gamearea-buttons.png)  
   
 - The game area contains two buttons that allow users to reset the game or return to the home page. The "Reset Game" button clears the current game board and resets the score to zero, allowing players to start a new game. The "Home" button takes the user back to the home page, where they can choose to start a new game or read the instructions. These buttons provide a simple and intuitive way for users to navigate the game and access important features.
 
