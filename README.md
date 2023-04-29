@@ -1,4 +1,4 @@
-<p><img src= "assets/images/multi-device-mockup.jpg"></p>
+![Mock Up](/assets/images/website-mockup.png)
 
 # TIC TAC TOE 
 
@@ -9,7 +9,7 @@ LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
 
 ## Table of contents
 
-1. [UX](#ux)
+1. [UX](#ux-user-experience)
     - [Visitor Goals](#visitor-goals)
     - [User Stories](#user-stories)
     - [Design Choices](#design-choices)
@@ -252,12 +252,25 @@ For example, during testing on a mobile device, the game was viewed on an iPhone
 - If the issue persists, try accessing the website on a different device or browser.
 
 ## Validating Code
+---
+- The HTML was validated using [W3C validator](https://validator.w3.org/) without any errors or warnings:
+![HTML Warnings](/assets/images/w3validator-warnings.png)
+---
+- The CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) without any errors, however displayed the following warnings:
 
-I ran the HTML code through the [W3C validator](https://validator.w3.org/) without any issues.
+![CSS Warnings](/assets/images/jigsaw-warnings.png)
 
-The CSS code ran through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) without any issues.
+  - In W3C Jigsaw, "Imported style sheets are not checked in direct input and file upload modes" means that any imported style sheets, which are external CSS files referenced by a link tag in the HTML file, are not validated by the tool in direct input or file upload modes. 
+  - The warnings on line 127-185 means that since CSS variables are dynamic in nature and can change at runtime, they cannot be statically checked during validation. In other words, the W3C Jigsaw validator is not capable of detecting issues related to CSS variables during the validation process. 
+  - The other warnings complaining about borders being the same colour as backgrounds is necessary for the curved border of the buttons in my code.
+
+---
 
 The Javascript code ran through the [Jshint validator](https://jshint.com/) with one error because the instructionsPage() is not called in the JS file, but it is being called in the HTML itself.
+
+![Jshint](/assets/images/jshint.png)
+
+---
 
 To ensure the project is performing optimally, a [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) report was conducted with the following scores:
 ![lighthouse scores](/assets/images/lighthouse.png)
