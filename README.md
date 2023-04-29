@@ -330,7 +330,7 @@ These scores indicate that the project has a high level of accessibility and mee
 * Resolution: Moved the button out of the form element and it worked as expected.
 
 ### **Known Bugs**
-As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
+- As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
 
 ## Deployment
 
@@ -383,7 +383,10 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Credits 
 
-The tic tac toe game was built based on a youtube tutorial:
-
+- The functionality of the games board was built based on a youtube tutorial:
 [Build Tic Tac Toe With JavaScript - Tutorial](https://www.youtube.com/watch?v=Y-GkMjUZsmM)
 by Web Dev Simplified
+- The winning message structure was from [Sweet Alerts](https://sweetalert2.github.io/#download)
+- A big thankyou to my mentor Richard for getting me through this project!
+- A big thankyou to te tutors at Code Institute, I don't know where I'd be without them!
+

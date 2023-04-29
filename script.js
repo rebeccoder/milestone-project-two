@@ -57,7 +57,7 @@ function startGame(event) {
 
     setupGrid();
 
-    setupScoreboard()
+    setupScoreboard();
 
 }
 
