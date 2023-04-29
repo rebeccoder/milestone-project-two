@@ -20,7 +20,7 @@ LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
 
 3. [Future Goals](#future-goals)
 
-4. [Technology Used](#technology-used)
+4. [Technologies Used](#technologies-used)
 
 5. [Testing](#testing)
 
@@ -78,7 +78,7 @@ The styling for the game board was influenced from a youtube tutorial which I ha
 The winning message was also a Sweet Alert message but I changed the buttons to black to match the monochrome style of the board.
 All other styling in the wesbite is original CSS.
 
-
+---
 ## Wireframes
 
 The website was designed on a wireframe software called Balsamiq.  
@@ -92,6 +92,7 @@ The website was designed on a wireframe software called Balsamiq.
 ### **Mobile Wireframe:**
 ![Mobile Wireframe](/assets/images/mobile-wireframe.png)
 
+---
 ## Features
 
 ### **Player Name Inputs**
@@ -179,7 +180,7 @@ Sweet Alerts. A message box pops up in the center of the screen saying the "play
 - To display a high score scoreboard
 - To keep track of users wins and losses, who they played and a breakdown of how they won/loss
 
- 
+---
 ## Technologies Used
 
  [HTML Formatter:](https://webformatter.com/html)
@@ -204,7 +205,7 @@ Sweet Alerts. A message box pops up in the center of the screen saying the "play
 -  [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
 
-
+---
 ## Testing      
 
 ### **Responsivity**
@@ -278,8 +279,8 @@ To ensure the project is performing optimally, a [Lighthouse](https://chrome.goo
 ![lighthouse scores](/assets/images/lighthouse.png)
 These scores indicate that the project has a high level of accessibility and meets best practices and SEO standards. The perfomance score has been brought down by my computers antivirus software, so the score is not an indicator for the need to improve anything.
 
+---
 ## UI 
-
 
 ### **Welcome Area**
 - Logo displays correctly on all devices
@@ -301,7 +302,7 @@ These scores indicate that the project has a high level of accessibility and mee
 - Reset button clears the scoreboard and the game board
 - Return to main menu resets the game and player names
 
-
+---
 ## Issues and Resolutions
 
 * Problem: X's and O's not able to have aria-labels
@@ -334,6 +335,7 @@ These scores indicate that the project has a high level of accessibility and mee
 ### **Known Bugs**
 - As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
 
+---
 ## Deployment
 
 ### **GitHub Pages**
@@ -382,7 +384,7 @@ $ git clone https://github.com/rebeccoder/milestone-project-one
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-
+---
 ## Credits 
 
 - The functionality of the games board was built based on a youtube tutorial:
