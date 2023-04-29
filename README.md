@@ -332,6 +332,7 @@ These scores indicate that the project has a high level of accessibility and mee
 * Cause: The "read instructions" button was inside the form element and itw was recognising it as a submit button even though it wasn't
 * Resolution: Moved the button out of the form element and it worked as expected.
 
+---
 ### **Known Bugs**
 - As far as I'm aware there are no bugs left in the code, although the accessibility would benefit from being worked on more!
 
@@ -392,5 +393,5 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 by Web Dev Simplified
 - The winning message structure was from [Sweet Alerts](https://sweetalert2.github.io/#download)
 - A big thankyou to my mentor Richard for getting me through this project!
-- A big thankyou to te tutors at Code Institute, I don't know where I'd be without them!
+- A big thankyou to the tutors at Code Institute, I don't know where I'd be without them!
 
