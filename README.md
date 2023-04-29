@@ -3,7 +3,8 @@
 # TIC TAC TOE 
 
 ## Overview
-This app was created for my second milestone project with The Code Institute where I demonstrate what I have learnt so far on their web development course. It is a interactive front end website using HTML, CSS and JavaScript. The websites goal is to be intuitive, user friendly, simple to use and fun. 
+
+This is a Tic Tac Toe game built using HTML, CSS, and JavaScript. It was created for my second milestone project with The Code Institute.
 
 LIVE LINK : https://rebeccoder.github.io/milestone-project-two/index.html
 
@@ -145,7 +146,8 @@ The website was designed on a wireframe software called Balsamiq.
   
 ![Wining Message](/assets/images/winning-message.png)  
   
-- The winning message in this game was made using sweet alerts. A message box pops up in the center of the screen saying the "player1/player2 wins!" using the actual name that was entered by the user. It also gives the option to play again or return to the main menu. This feature makes it easy for players to determine the winner of the game and adds a fun element to the gameplay.
+- The winning message in this game was made using 
+Sweet Alerts. A message box pops up in the center of the screen saying the "player1/player2 wins!" using the actual name that was entered by the user. It also gives the option to play again or return to the main menu. This feature makes it easy for players to determine the winner of the game and adds a fun element to the gameplay.
 
 ---
 ### **Draw**  
@@ -160,7 +162,7 @@ The website was designed on a wireframe software called Balsamiq.
   
 ![ScoreBoard](/assets/images/scoreboard.png)  
   
-- The game includes a scoreboard that keeps track of the number of wins for each player. The scoreboard is displayed durectly underneath the tic tac toe board and updates automatically after each game. It displays the player names and the number of games won. This feature provides an engaging and competitive experience for the players, as they can keep track of their progress throughout the game.
+- The game includes a scoreboard that keeps track of the number of wins for each player. The scoreboard is displayed durectly underneath the Tic Tac Toe board and updates automatically after each game. It displays the player names and the number of games won. This feature provides an engaging and competitive experience for the players, as they can keep track of their progress throughout the game.
 
 ---
 
